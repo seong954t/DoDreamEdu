@@ -61,7 +61,6 @@ function checkWinLotto(){
           result[i].style.color = "red";
       }
   }
-  winning_numbers.push(bonus_number);
   drawWinCircle(winning_numbers);
   document.getElementById("buy-lotto").disabled = true;
   document.getElementById("check-winner").disabled = true;
