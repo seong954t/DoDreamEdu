@@ -16,7 +16,7 @@ function checkDuplicatedNum(lotto_nums, ball_num){
 // getRandomNum 함수를 통해 lotto_nums(list)에 숫자 6개를 넣어 반환한다.
 // checkDuplicatedNum 함수를 통해 lotto 숫자에 중복된 숫자가 들어가지 않도록 한다.
 function getLottoNums(){
-    lotto_nums = [12, 11, 7, 9, 41, 24]
+    var lotto_nums = [12, 11, 7, 9, 41, 24]
     return lotto_nums
 }
 
@@ -46,7 +46,8 @@ function getWinningResult(lotto_nums){
 // 위의 함수를 작성하면 아래 부분을 통해 실행이 완료됩니다.
 // 아래 부분은 수정하지 마세요.
 function addLottoNum(){
-    user_lotto_numbers_list.push(getLottoNums());
+    var lotto_nums = getLottoNums();
+    user_lotto_numbers_list.push(lotto_nums);
     drawCircle(lotto_nums);
 }
 
