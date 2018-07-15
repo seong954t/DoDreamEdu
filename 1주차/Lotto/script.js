@@ -47,8 +47,6 @@ function getWinningResult(lotto_nums){
 // 아래 부분은 수정하지 마세요.
 function addLottoNum(){
     user_lotto_numbers_list.push(getLottoNums());
-
-    document.getElementById("check-winner").disabled = false;
     drawCircle(lotto_nums);
 }
 
