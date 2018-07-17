@@ -16,8 +16,8 @@
     2조
     노현성
     박슬난
-    구자룡 - https://kujarung.github.io/
-    박태규 - https://github.com/esongi/esongi.github.io.git
+    구자룡 - https://github.com/kujarung/kujarung.github.io
+    박태규 - https://github.com/esongi/esongi.github.io
     
     3조
     최장훈
