@@ -17,8 +17,8 @@
     노현성
     박슬난
     구자룡 - https://kujarung.github.io/
-    박태규
-
+    박태규 - https://github.com/esongi/esongi.github.io.git
+    
     3조
     최장훈
     김윤지
