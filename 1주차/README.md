@@ -21,6 +21,7 @@
     $ git remote add [remote 이름] [remote 주소]
     ex) git remote add origin https://github.com/seong954t/DoDreamEdu.git
     github주소를 연동할 수 있게 해준다.
+    
 ##
 
     $ git add [. / * / 파일이름]
