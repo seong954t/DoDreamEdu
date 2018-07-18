@@ -27,7 +27,7 @@
     4조
     박주연 
     최준성
-    황준혁
+    황준혁 - https://github.com/wnsgur556/wnsgur556.github.io.git
 
     5조
     장우종
