@@ -28,8 +28,8 @@
     박주연
     박주연 - https://github.com/jjuya/jjuya.github.io
     최준성
-    황준혁
-    
+    황준혁 - https://github.com/wnsgur556/wnsgur556.github.io.git
+
     5조
     장우종
     국재건
