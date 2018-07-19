@@ -20,7 +20,7 @@
     박태규 - https://github.com/esongi/esongi.github.io
 
     3조
-    최장훈
+    최장훈 - https://github.com/cellenar/cellenar
     김윤지
     조영관 - https://github.com/jo0411/jo0411.github.io
 
