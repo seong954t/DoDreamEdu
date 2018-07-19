@@ -14,7 +14,7 @@
     정재균
 
     2조
-    노현성 - https://nobj-hongik.github.io/
+    노현성 - https://github.com/nobj-hongik/nobj-hongik.github.io/
     박슬난
     구자룡 - https://github.com/kujarung/kujarung.github.io
     박태규 - https://github.com/esongi/esongi.github.io
