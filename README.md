@@ -4,21 +4,21 @@
 
     김승태
     최기현
-    
+
 ## 수강생
 
     1조
     김주협
     제형민
     권영인
-    정재균 
-    
+    정재균
+
     2조
-    노현성
+    노현성 - https://nobj-hongik.github.io/
     박슬난
     구자룡 - https://github.com/kujarung/kujarung.github.io
     박태규 - https://github.com/esongi/esongi.github.io
-    
+
     3조
     최장훈
     김윤지
