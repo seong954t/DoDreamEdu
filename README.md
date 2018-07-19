@@ -34,7 +34,7 @@
     장우종
     국재건
     송민정
-    이혜련
+    이혜련 - https://github.com/rowanlee92/rowanlee92.github.io
 
     6조
     김양훈
