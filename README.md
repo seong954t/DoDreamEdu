@@ -22,7 +22,7 @@
     3조
     최장훈
     김윤지
-    조영관
+    조영관 - https://github.com/jo0411/jo0411.github.io
 
     4조
     박주연
