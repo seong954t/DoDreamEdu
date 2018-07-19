@@ -11,7 +11,7 @@
     정재균
 
     2조
-    노현성 nobj-hongik.github.io
+    노현성 - nobj-hongik.github.io
     박슬난
     구자룡
     박태규   
