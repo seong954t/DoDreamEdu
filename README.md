@@ -18,7 +18,7 @@
     
     3조
     최장훈
-    김윤지
+    김윤지 https://github.com/cocogoodjob/cocogoodjob.github.io
     조영관
     
     4조
