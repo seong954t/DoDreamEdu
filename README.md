@@ -10,7 +10,7 @@
     1조
     김주협
     제형민
-    권영인                                           
+    권영인         
     정재균
 
     2조
@@ -35,8 +35,7 @@
     송민정
     이혜련 - https://github.com/rowanlee92/rowanlee92.github.io
 
-
     6조
     김양훈
     이하림
-    조서형
+    조서형 - https://github.com/jjoeey/jjoeey.github.io
