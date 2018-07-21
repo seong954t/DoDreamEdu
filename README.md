@@ -21,7 +21,7 @@
 
     3조
     최장훈 - https://github.com/cellenar/cellenar.github.io
-    김윤지
+    김윤지 - https://github.com/cocogoodjob/cocogoodjob.github.io
     조영관 - https://github.com/jo0411/jo0411.github.io
 
     4조
