@@ -8,7 +8,7 @@
 ## 수강생
 
     1조
-    김주협
+    김주협 -https://github.com/faithinker/faithinker.github.io
     제형민
     권영인         
     정재균
