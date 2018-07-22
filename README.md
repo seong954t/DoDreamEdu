@@ -4,7 +4,7 @@
 
     김승태
     최기현
-    
+
 ## 수강생
 
     1조
@@ -28,7 +28,7 @@
     박주연 - https://github.com/jjuya/jjuya.github.io
     최준성 - https://github.com/hengmo/hengmo.github.io
     황준혁 - https://github.com/wnsgur556/wnsgur556.github.io
-    
+
     5조
     장우종
     국재건
