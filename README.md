@@ -33,7 +33,7 @@
     이혜련
     
     6조 
-    김양훈
+    김양훈 https://github.com/kimyanghun/kimyanghun.github.io.git
     이하림
     조서형
 
