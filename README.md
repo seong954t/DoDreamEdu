@@ -37,5 +37,5 @@
 
     6조
     김양훈
-    이하림
+    이하림 - https://github.com/tangram69/tangram69.github.io
     조서형 - https://github.com/jjoeey/jjoeey.github.io
