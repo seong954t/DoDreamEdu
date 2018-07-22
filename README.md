@@ -1,4 +1,4 @@
-# 두드림 매치 메이커스 개발 교육
+﻿# 두드림 매치 메이커스 개발 교육
 
 ## 강사
 
@@ -9,7 +9,7 @@
 
     1조
     김주협 -https://github.com/faithinker/faithinker.github.io
-    제형민
+    제형민 -https://github.com/jehyungmin/jehyungmin.github.io
     권영인         
     정재균
 
