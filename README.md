@@ -33,7 +33,7 @@
     5조
     장우종 - https://github.com/wj923/wj923.github.io.git
     국재건
-    송민정
+    송민정 - https://github.com/minjeongsong/minjeongsong.github.io.git
     이혜련 - https://github.com/rowanlee92/rowanlee92.github.io
 
     6조
