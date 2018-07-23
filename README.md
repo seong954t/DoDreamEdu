@@ -32,7 +32,7 @@
 
     5조
     장우종 - https://github.com/wj923/wj923.github.io.git
-    국재건
+    국재건 - https://github.com/Jgunguk/jgunguk.github.io.git
     송민정 - https://github.com/minjeongsong/minjeongsong.github.io.git
     이혜련 - https://github.com/rowanlee92/rowanlee92.github.io
 
