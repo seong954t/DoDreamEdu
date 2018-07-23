@@ -28,6 +28,11 @@
     박주연 - https://github.com/jjuya/jjuya.github.io
     최준성 - https://github.com/hengmo/hengmo.github.io
     황준혁 - https://github.com/wnsgur556/wnsgur556.github.io
+
+    4조
+    박주연 - https://github.com/jjuya/jjuya.github.io
+    최준성 - https://github.com/hengmo/hengmo.github.io
+    황준혁 - https://github.com/wnsgur556/wnsgur556.github.io
     
     5조
     장우종 - https://github.com/wj923/wj923.github.io.git
@@ -36,6 +41,6 @@
     이혜련 - https://github.com/rowanlee92/rowanlee92.github.io
 
     6조
-    김양훈
+    김양훈 - https://github.com/kimyanghun/kimyanghun.github.io.git
     이하림 - https://github.com/tangram69/tangram69.github.io
     조서형 - https://github.com/jjoeey/jjoeey.github.io
