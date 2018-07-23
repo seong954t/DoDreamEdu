@@ -26,6 +26,7 @@ function login() {
       alert("로그인 성공");
       $("#login-frame").hide();
       $("#db-upload-frame").show();
+      uploadDBListenner();
     }, function(error) {
       console.log(error);
       alert("로그인 실패");
@@ -35,18 +36,38 @@ function login() {
   console.log("로그인 함수 실행 끝");
 }
 
-function logout() {
-  console.log("로그아웃");
-  $("#db-upload-frame").hide();
-  $("#login-frame").show();
-}
-
-
 $("#login-btn").click(
   function() {
     login();
   }
 );
+
+
+function uploadDB() {
+    firebase.database().ref().set(
+      {
+        groupChat: $("#input-txt").val()
+      }
+    );
+}
+
+function uploadDBListenner() {
+  firebase.database().ref().on('child_changed', function(data) {
+    $("#real-time-val").text(data.val());
+  });
+}
+
+$("#send-btn").click(
+  function() {
+    uploadDB();
+  }
+);
+
+function logout() {
+  console.log("로그아웃");
+  $("#db-upload-frame").hide();
+  $("#login-frame").show();
+}
 
 $("#logout-btn").click(
   function() {
