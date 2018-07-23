@@ -11,7 +11,8 @@
     김주협 - https://github.com/faithinker/faithinker.github.io
     제형민 - https://github.com/jehyungmin/jehyungmin.github.io
     권영인 - https://github.com/jjuguriKing/jjuguriKing.github.io        
-    정재균
+    정재균 - https://github.com/thisisnotahumanbeing/thisisnotahumanbeing.github.io
+
 
     2조
     노현성 - https://github.com/nobj-hongik/nobj-hongik.github.io/
