@@ -10,8 +10,8 @@
     1조
     김주협 - https://github.com/faithinker/faithinker.github.io
     제형민 - https://github.com/jehyungmin/jehyungmin.github.io
-    권영인 - https://github.com/jjuguriKing/jjuguriKing.github.io
-    정재균
+    권영인 - https://github.com/jjuguriKing/jjuguriKing.github.io        
+    정재균 - https://github.com/thisisnotahumanbeing/thisisnotahumanbeing.github.io
 
     2조
     노현성 - https://github.com/nobj-hongik/nobj-hongik.github.io/
@@ -23,11 +23,6 @@
     최장훈 - https://github.com/cellenar/cellenar.github.io
     김윤지 - https://github.com/cocogoodjob/cocogoodjob.github.io
     조영관 - https://github.com/jo0411/jo0411.github.io
-
-    4조
-    박주연 - https://github.com/jjuya/jjuya.github.io
-    최준성 - https://github.com/hengmo/hengmo.github.io
-    황준혁 - https://github.com/wnsgur556/wnsgur556.github.io
 
     4조
     박주연 - https://github.com/jjuya/jjuya.github.io
