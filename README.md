@@ -13,7 +13,6 @@
     권영인 - https://github.com/jjuguriKing/jjuguriKing.github.io        
     정재균 - https://github.com/thisisnotahumanbeing/thisisnotahumanbeing.github.io
 
-
     2조
     노현성 - https://github.com/nobj-hongik/nobj-hongik.github.io/
     박슬난
@@ -37,6 +36,6 @@
     이혜련 - https://github.com/rowanlee92/rowanlee92.github.io
 
     6조
-    김양훈
+    김양훈 - https://github.com/kimyanghun/kimyanghun.github.io.git
     이하림 - https://github.com/tangram69/tangram69.github.io
     조서형 - https://github.com/jjoeey/jjoeey.github.io
