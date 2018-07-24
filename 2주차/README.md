@@ -1,11 +1,11 @@
 # JQUERY
 
-## class, id 접근하기
+### class, id 접근하기
     
     $(".클래스 이름")
     $("#아이디 이름")
 
-## input 값 가져오기 or 넣기
+### input 값 가져오기 or 넣기
 
     $("#아이디 이름").val()
     ex) $("#email-input").val()
@@ -14,7 +14,7 @@
     ex) $("#email-input").val("myname@github.com")
 
 
-## text 내용 가져오기 or 넣기
+### text 내용 가져오기 or 넣기
 
     $("#아이디 이름").text()
     ex) $("#title").text()
@@ -22,7 +22,7 @@
     $("#아이디 이름").text("입력할 내용")
     ex) $("#title").text("타이틀 입니다.")
 
-## 클릭 이벤트 설정하기
+### 클릭 이벤트 설정하기
 
     $("#아이디 이름").click( 함수 )
     ex) $("#btn").click(
@@ -31,7 +31,7 @@
             }
         );
 
-## class 이름 추가 or 제거하기
+### class 이름 추가 or 제거하기
 
     $("#아이디 이름").addClass("클래스 이름")
     ex) $("#login-btn").addClass("enable-login")
@@ -39,7 +39,7 @@
     $("#아이디 이름").removeClass("클래스 이름")
     ex) $("#login-btn").removeClass("disable-login")
 
-## DOM 보이기 or 숨기기
+### DOM 보이기 or 숨기기
 
     $("아이디 이름").show()
     ex) $("#login-err").show()
@@ -47,7 +47,7 @@
     $("아이디 이름").hide()
     ex) $("#login-err").hide()
 
-## 키보드 이벤트 설정하기
+### 키보드 이벤트 설정하기
 
     $("#아이디 이름").keyup( 함수 )
     ex) $("#email-input").keyup(
@@ -65,7 +65,7 @@
 
 # FIREBASE
 
-## 로그인 상태 변화 감지
+### 로그인 상태 변화 감지
 
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
@@ -76,7 +76,7 @@
         }
     });
 
-## 회원가입
+### 회원가입
 
     firebase.auth().createUserWithEmailAndPassword(사용자 이메일, 사용자 비밀번호)
     .then(
@@ -96,7 +96,7 @@
         }
     )
 
-## 로그인
+### 로그인
 
     firebase.auth().signInWithEmailAndPassword(사용자 이메일, 사용자 비밀번호)
     .then(
@@ -118,7 +118,7 @@
         }
     );
 
-## 로그인 정보 가져오기
+### 로그인 정보 가져오기
 
     사용자 UID
     firebase.auth().getUid()
@@ -127,7 +127,7 @@
     사용자 EMAIL
     firebase.auth().currentUser.email
 
-## 데이터 베이스 추가하기
+#### 데이터 베이스 추가하기
 
     firebase.database().ref(데이터 베이스 경로).set( 추가할 데이터 );
 
@@ -145,7 +145,7 @@
     }
     와 같은 형식의 데이터
 
-## 데이터 베이스 이벤트 받아오기
+#### 데이터 베이스 이벤트 받아오기
 
     firebase.database().ref(데이터 베이스 경로).on(이벤트 이름, 함수)
 
