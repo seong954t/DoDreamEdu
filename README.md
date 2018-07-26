@@ -23,6 +23,7 @@
     최장훈 - https://github.com/cellenar/cellenar.github.io
     김윤지 - https://github.com/cocogoodjob/cocogoodjob.github.io
     조영관 - https://github.com/jo0411/jo0411.github.io
+    이은진 - https://github.com/eunziny/eunziny.github.io
 
     4조
     박주연 - https://github.com/jjuya/jjuya.github.io
