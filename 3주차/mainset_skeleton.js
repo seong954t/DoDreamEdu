@@ -79,7 +79,7 @@ function getInputChat(){
     return ''
 }
 
-// 나의 채팅 내용을 WEB에 보이도록 한다.
+// 나의 채팅 내용을 브라우저에 보이도록 한다.
 function makeMyChat(contents){
     $("#chat-contents-wrapper").append(
         "<div>"+
@@ -92,7 +92,7 @@ function makeMyChat(contents){
     
 }
 
-// 상대의 채팅 내용을 WEB에 보이도록 한다.
+// 상대의 채팅 내용을 브라우저에 보이도록 한다.
 function makeOtherChat(nickName, contents){
     $("#chat-contents-wrapper").append(
         "<div>"+
@@ -129,12 +129,12 @@ function upLoadNickname(uid){
     });
 }
 
-// 수정된 닉네임을 WEB에 표시한다.
+// 수정된 닉네임을 브라우저에 표시한다.
 function setNicknameWeb(nickName){
     $("#user-nic").text(nickName)
 }
 
-// 입장 인원을 WEB에 보여준다.
+// 입장 인원을 브라우저에 보여준다.
 function setOnlineNumber(onlineNum){
     $("#online-num").text(onlineNum);
 }
