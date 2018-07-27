@@ -1,88 +1,67 @@
 function signup(){
-    firebase.auth().createUserWithEmailAndPassword(getemail(), getpassword()).then(
+    firebase.auth().createUserWithEmailAndPassword(getEmail(),getPassword())
+    .then(
         function(success){
             console.log(success);
-            alert("회원가입 성공");
+            alert('회원가입성공');
+            
         },function(error){
             console.log(error);
-            alert("회원가입 실패");
+            alert('회원가입 실패');
         }
     )
-    console.log('회원가입');
 }
-
 function signin(){
-    firebase.auth().signInWithEmailAndPassword(getemail(), getpassword()).then(
+    console.log('로그인');
+    firebase.auth().signInWithEmailAndPassword(getEmail(), getPassword())
+    .then(
         function(success){
             console.log(success);
-            alert("로그인 성공");
-            $("#login-frame").hide;
+            alert('로그인 성공');
+            $("#login-frame").hide();
             $("#db-upload-frame").show();
-            uploadDBListener();
         },function(error){
             console.log(error);
-            alert("로그인 실패");
+            alert('로그인 실패');
         }
     )
+    console.log('로그인 함수 실행 끝');
 }
-
 function uploadDB(){
     firebase.database().ref().set({
-        groupChat: $("input-txt").val()
-    });
+        groupChat: $("#input-txt").val()
+      });
 }
-
-function uploadDBListener(){
-    firebase.database().ref().on('child_changed',function(data){
+function uploadDBListenner(){
+    firebase.database().ref().on('child_changed', function(data) {
         console.log(data.val());
-        $('#real-time-val').text(data.val());
+        $("#real-time-val").text(data.val());
     });
 }
-
 function signout(){
-    firebase.auth().signout().then(
-        function(){
-            $("#login-frame").show();
-            $("#db-upload-frame").hide();
-        }
-    )
+    $("#db-upload-frame").hide();
+    $("#login-frame").show();
 }
-
 $("#send-btn").click(
     function(){
         uploadDB();
     }
 )
-
-$("#login-btn").click(
-    function(){
-        console.log("로그인 버튼 클릭")
-        signin();
-    }
-)
-
-$('#signup-btn').click(
-    function(){
-        console.log('로그인 버튼 클릭');
-        signup();
-    }
-)
-
-$('#logout-btn').click(
-    function(){
-        console.log('로그아웃 버튼 클릭');
-        signout();
-    }
-)
-
-function getemail(){
+$("#login-btn").click(function(){
+    signin();
+})
+$("#logout-btn").click(function(){
+    signout();
+})
+$("#signup-btn").click(function(){
+    signup();
+});
+function getEmail(){
     return $("#email").val();
 }
-
-function getpassword(){
+function getPassword(){
     return $("#password").val();
 }
-
 function setDBdata(data){
-    $("#real-time-val").text(data)
+    $("real-time-val").text(data);
 }
