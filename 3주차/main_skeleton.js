@@ -50,8 +50,11 @@ function signup(){
     showLoading();
     // 회원가입할 이메일과 비밀번호를 통해 회원가입을 진행한다.
 
-    // TODO :: createUserWithEmailAndPassword의 인자로 Email과 Password의 값 전달
-    firebase.auth().createUserWithEmailAndPassword('Email 받는 함수', 'Password 받는 함수')
+    // TODO :: createUserWithEmailAndPassword의 인자로 전달 할 Email과 Password의 값을 가져온다.
+    var email = ""
+    var pwd = ""
+
+    firebase.auth().createUserWithEmailAndPassword(email, pwd)
     .then(
         function(user){
             // 기존 회원가입이 없는 최초 회원가입일 경우 진행된다.
@@ -66,7 +69,7 @@ function signup(){
         function(error){
             if(error.code == "auth/email-already-in-use"){
                 // 이미 해당 회원이 있으면 로그인을 진행한다.
-                // TODO :: 로그인 함수를 실행한다.
+                // TODO :: 로그인 함수를 실행한다(email, pwd 함께 전달).
                 
                 return;
             }else if(error.code == "auth/invalid-email"){
@@ -87,8 +90,8 @@ function signup(){
 }
 
 // 로그인을 진행한다.
-function signin(){
-    firebase.auth().signInWithEmailAndPassword(getEmail(), getPassword())
+function signin(email, pwd){
+    firebase.auth().signInWithEmailAndPassword(email, pwd)
     .then(
         function(success) {
             hideLoading();
