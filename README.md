@@ -4,14 +4,14 @@
 
     김승태
     최기현
-
+    
 ## 수강생
 
     1조
-    김주협 -https://github.com/faithinker/faithinker.github.io
-    제형민 -https://github.com/jehyungmin/jehyungmin.github.io
-    권영인         
-    정재균
+    김주협 - https://github.com/faithinker/faithinker.github.io
+    제형민 - https://github.com/jehyungmin/jehyungmin.github.io
+    권영인 - https://github.com/jjuguriKing/jjuguriKing.github.io        
+    정재균 - https://github.com/thisisnotahumanbeing/thisisnotahumanbeing.github.io
 
     2조
     노현성 - https://github.com/nobj-hongik/nobj-hongik.github.io/
@@ -28,10 +28,10 @@
     박주연 - https://github.com/jjuya/jjuya.github.io
     최준성 - https://github.com/hengmo/hengmo.github.io
     황준혁 - https://github.com/wnsgur556/wnsgur556.github.io
-
+    
     5조
     장우종 - https://github.com/wj923/wj923.github.io.git
-    국재건
+    국재건 - https://github.com/Jgunguk/jgunguk.github.io.git
     송민정 - https://github.com/minjeongsong/minjeongsong.github.io.git
     이혜련 - https://github.com/rowanlee92/rowanlee92.github.io
 
