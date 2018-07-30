@@ -1,23 +1,24 @@
 .frame{
-    width: 250px;
+    width:250px;
     height: 250px;
-    padding: 50px;
+    /*background-color: greenyellow;*/
     position: fixed;
-    top: 50%;
+    top:50%;
     right: 0;
-    left: 0;
-    transform: translate(0, -50%);
-    margin: auto;
+    left:0;
+    transform: translate(0.-50%);
+    margin:auto;
     border-radius: 10px;
     box-shadow: 3px 3px 7px 7px rgba(0, 0, 0, 0.1);
     text-align: center;
+    padding:50px;
 }
 
 .title{
-    color: rgb(3, 198, 53);
+    color:rgb(3, 198, 53);
     text-align: center;
     font-size: 36px;
-    font-weight: bold;
+    font-weight:bold;
     margin: auto;
 }
 
@@ -29,6 +30,7 @@
     border: none;
     margin: 5px 0px;
     font-size: 14px;
+    
 }
 
 .buttons{
@@ -37,22 +39,21 @@
     margin: 5px 0px;
     background-color: rgb(3, 198, 53);
     border-radius: 100px;
-    border: none;
-    color: rgb(255, 255, 255);
+    color:white;
     font-size: 16px;
     font-weight: bold;
 }
 
-#db-upload-frame{
+#chat-frame{
     display: none;
 }
 
 #real-time-val{
     display: block;
     width: 250px;
-    height: 70px;
+    height: 90px;
     word-break: break-all;
     white-space: pre-wrap;
-    overflow-y: scroll;
-    text-align: left;
+    overflow: scroll;
+    background-color: whitesmoke;
 }
