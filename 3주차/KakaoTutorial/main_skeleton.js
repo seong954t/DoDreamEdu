@@ -35,25 +35,29 @@ $('.kakao-login').keyup(function(event){
         if(getPassword().length > 5){
             // 비밀번호가 6글자 이상일 경우 색상을 로그인 가능하도록 변경
             // TODO :: 로그인 버튼 색상을 로그인 가능하도록 변경
+            enableLogin();
             
         }else{
             // 비밀번호가 6글자 미만일 경우 색상을 로그인 불가능하도록 변경
             // TODO :: 로그인 버튼 색상을 로그인 불가능하도록 변경
-            
+
+            disableLogin();
         }
     }
 });
 
 // 회원가입을 진행한다.
 function signup(){
+    alert("회원가입진행");
     // 로딩을 띄운다.
     showLoading();
     // 회원가입할 이메일과 비밀번호를 통해 회원가입을 진행한다.
 
     // TODO :: createUserWithEmailAndPassword의 인자로 전달 할 Email과 Password의 값을 가져온다.
-    var email = ""
-    var pwd = ""
-
+    var email = getEmail();
+    console.log("이메일"+email);
+    var pwd = getPassword();
+    console.log("비번"+pwd);
     firebase.auth().createUserWithEmailAndPassword(email, pwd)
     .then(
         function(user){
@@ -81,7 +85,7 @@ function signup(){
                 // 사용불가능한 비밀번호일 경우 발생한다.
                 // 에러문구 발생
                 // TODO :: 에러문구를 보이도록 한다.
-                
+               // alert("")
             }
             // 로딩을 제거한다.
             hideLoading();
@@ -99,7 +103,7 @@ function signin(email, pwd){
         function(error){
             // 로그인에 실패할 경우 발생
             // TODO :: 에러문구를 보이도록 한다.
-
+            alert("로그인에 실패하였습니다.");
 
             // 로딩을 제거한다.
             hideLoading();
@@ -114,7 +118,7 @@ $("#login-btn").click(
             // 로그인 활성화 시 실행
 
             // TODO :: 회원가입을 실행한다.
-            
+            signup();
         }
     }
 )
@@ -208,6 +212,7 @@ function chatDBListenner(){
 
             // 다란 사용자의 채팅을 WEB에 보여준다.
             // TODO :: 다른 사용자의 채팅 내용을 말풍선으로 보이도록 한다.
+            makeOtherChat(receiveChatData.nickName, receiveChatData.contents);
             // receiveChatData.nickName 에 다른 사용자의 닉네임이 담겨있음.
             // receiveChatData.contents 에 다른 사용자의 채팅 내용이 담겨있음.
 
@@ -292,7 +297,7 @@ function sendText(){
 
         // 전송이 불가능하도록 변경
         // TODO :: 전송이 불가능하도록 전송 버튼을 비활성화 한다.
-        
+        disableTextSend();
     }
 }
 
@@ -302,13 +307,13 @@ $("#input-chat").keyup(function(event){
         // Backspace 입력 시 글자수가 없으면 전송이 불가능하도록 변경
         if(getInputChat().length <= 1){
             // TODO :: 전송이 불가능하도록 전송 버튼을 비활성화 한다.
-            
+            disableTextSend();
         }
     }else{
         // Backspace 입력 시 글자수가 있으면 전송이 가능하도록 변경
         if(getInputChat().length > 0){
             // TODO :: 전송이 가능하도록 전송 버튼을 활성화 한다.
-            
+            enableTextSend();
         }
     }
 })
@@ -325,17 +330,17 @@ $("#input-chat").keypress(function(event){
             event.preventDefault();
 
             // TODO :: 채팅 내용을 전송한다.
-            
+            sendText();
         }
     }else{
         if(getInputChat().length > 0){
             // 채팅 입력 시 글자수가 있으면 전송이 가능하도록 변경
             // TODO :: 전송이 가능하도록 전송 버튼을 활성화 한다.
-            
+            enableTextSend();
         }else{
             // 채팅 입력 시 글자수가 없으면 전송이 불가능하도록 변경
             // TODO :: 전송이 불가능하도록 전송 버튼을 비활성화 한다.
-            
+            disableTextSend();
         }
     }
 })
@@ -345,13 +350,14 @@ $("#text-send").click(
     function(){
         // 채팅 데이터 전송
         // TODO :: 채팅 내용을 전송한다.
-
+        sendText();
     }
 )
 
 // 채팅 내용을 DB에 업로드 한다.
 function upLoadChat(contents){
     // 닉네임과 함께 데이터를 저장하기 위해 닉네임을 얻은 후 실행한다.
+    alert("upLoadChat");
     getNickname().once('value').then(function(success){
 
         // 채팅 데이터를 입력 시간을 통해 DB에 저장한다.
@@ -367,6 +373,7 @@ function upLoadChat(contents){
 
     // 채팅 내용을 WEB에 보여준다.
     // TODO :: 자신의 채팅 내용을 말풍선으로 보이도록 한다.
+    makeMyChat(contents);
     // contents 에 자신의 채팅 내용이 담겨있음.
     
 }
