@@ -80,7 +80,7 @@ function enableTextSend(){
 // 채팅 내용을 가져온다.
 function getInputChat(){
     // TODO :: id가 input-chat인 엘리먼트의 값을 가져와 반환한다.
-    return $("#input-chat").value
+    return $("#input-chat").val();
 }
 
 // 나의 채팅 내용을 브라우저에 보이도록 한다. hengmo
@@ -93,6 +93,7 @@ function makeMyChat(contents){
         "</div>"
     )
     // TODO :: 채팅 스크롤을 하단으로 내리도록 한다.
+    scrollBottom(); // 준혁
 
 }
 
@@ -107,7 +108,7 @@ function makeOtherChat(nickName, contents){
         "</div>"
     )
     // TODO :: 채팅 스크롤을 하단으로 내리도록 한다.
-    
+    scrollBottom(); // 준혁
 }
 
 // 채팅 스크롤을 가장 아래로 가게 한다.

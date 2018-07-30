@@ -359,7 +359,8 @@ $("#text-send").click(
     function(){
         // 채팅 데이터 전송
         // TODO :: 채팅 내용을 전송한다.
-        
+        sendText();
+
     }
 )
 //hengmo
