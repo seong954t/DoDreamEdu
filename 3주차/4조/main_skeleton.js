@@ -71,7 +71,7 @@ function signup(){
             if(error.code == "auth/email-already-in-use"){
                 // 이미 해당 회원이 있으면 로그인을 진행한다.
                 // TODO :: 로그인 함수를 실행한다(email, pwd 함께 전달).
-                
+
                 signin(email, pwd);
 
                 return;
