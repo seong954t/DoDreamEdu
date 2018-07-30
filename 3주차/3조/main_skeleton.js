@@ -35,14 +35,14 @@ $('.kakao-login').keyup(function(event){
         if(getPassword().length > 5){
             // 비밀번호가 6글자 이상일 경우 색상을 로그인 가능하도록 변경
             // TODO :: 로그인 버튼 색상을 로그인 가능하도록 변경
-            $("#login-btn").addClass("enable-login");
-            $("#login-btn").removeClass("disable-login");
+            enableLogin();
+            
             
         }else{
             // 비밀번호가 6글자 미만일 경우 색상을 로그인 불가능하도록 변경
             // TODO :: 로그인 버튼 색상을 로그인 불가능하도록 변경
-            $("#login-btn").removeClass("enable-login")
-            $("#login-btn").addClass("disable-login")
+            disableLogin();
+            
         }
     }
 });
