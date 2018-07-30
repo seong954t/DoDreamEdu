@@ -159,7 +159,7 @@ function hideKakaoLoginWrapper(){
     // TODO :: id가 kakao-wrapper인 엘리먼트에 show-kakao-wrapper 클래스를 제거한다.
     $("#kakao-wrapper").removeClass("show-kakao-wrapper");
     // TODO :: id가 kakao-wrapper인 엘리먼트에 hide-kakao-wrapper 클래스를 추가한다.
-    $("#kakao-wrapper").addClass("show-kakao-wrapper");
+    $("#kakao-wrapper").addClass("hide-kakao-wrapper");
 }
 
 // 채팅화면이 나타나게 한다.
