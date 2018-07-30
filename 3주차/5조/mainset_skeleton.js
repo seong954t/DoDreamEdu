@@ -20,15 +20,17 @@ function getPassword(){
 // 로그인이 가능하도록 변경한다.
 function enableLogin(){
     // TODO :: id가 login-btn인 엘리먼트에 enable-login 클래스를 추가한다.
+    $("#login-btn").addClass('enable-login');
     // TODO :: id가 login-btn인 엘리먼트에 disable-login 클래스를 제거한다.
-    document.getElementById('login-btn').classList.toggle('enable-login');
+    $("#login-btn").removeClass('disable-login');
 }
 
 // 로그인이 불가능하도록 변경한다.
 function disableLogin(){
     // TODO :: id가 login-btn인 엘리먼트에 enable-login 클래스를 제거한다.
+    $("#login-btn").removeClass('enable-login');
     // TODO :: id가 login-btn인 엘리먼트에 disable-login 클래스를 추가한다.
-    document.getElementById('login-btn').classList.toggle('disable-login');
+    $("#login-btn").addClass('disable-login');
 }
 
 // 로그인 에러 문구를 띄운다.
