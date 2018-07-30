@@ -30,7 +30,7 @@ $('.kakao-login').keyup(function(event){
         // Enter 이 외 입력 시 실행
         // 로그인 실패 문구 제거
         // TODO :: 에러문구를 제거한다.
-
+        
 
         if(getPassword().length > 5){
             // 비밀번호가 6글자 이상일 경우 색상을 로그인 가능하도록 변경
@@ -208,6 +208,7 @@ function chatDBListenner(){
 
             // 다란 사용자의 채팅을 WEB에 보여준다.
             // TODO :: 다른 사용자의 채팅 내용을 말풍선으로 보이도록 한다.
+            makeOtherChat(receiveChatData.nickName,receiveChatData.contents);
             // receiveChatData.nickName 에 다른 사용자의 닉네임이 담겨있음.
             // receiveChatData.contents 에 다른 사용자의 채팅 내용이 담겨있음.
 
