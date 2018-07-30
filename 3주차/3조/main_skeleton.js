@@ -54,8 +54,8 @@ function signup(){
     // 회원가입할 이메일과 비밀번호를 통해 회원가입을 진행한다.
 
     // TODO :: createUserWithEmailAndPassword의 인자로 전달 할 Email과 Password의 값을 가져온다.
-    var email = ""
-    var pwd = ""
+    var email = getEmail();
+    var pwd = getPassword();
 
     firebase.auth().createUserWithEmailAndPassword(email, pwd)
     .then(
@@ -73,18 +73,20 @@ function signup(){
             if(error.code == "auth/email-already-in-use"){
                 // 이미 해당 회원이 있으면 로그인을 진행한다.
                 // TODO :: 로그인 함수를 실행한다(email, pwd 함께 전달).
+                signin(email, pwd);
                 
                 return;
             }else if(error.code == "auth/invalid-email"){
                 // 사용불가능한 이메일일 경우 발생한다.
                 // 에러문구 발생
                 // TODO :: 에러문구를 보이도록 한다.
+                showErrorLog();
                 
             }else if(error.code == "auth/weak-password"){
                 // 사용불가능한 비밀번호일 경우 발생한다.
                 // 에러문구 발생
                 // TODO :: 에러문구를 보이도록 한다.
-                
+                showErrorLog();
             }
             // 로딩을 제거한다.
             hideLoading();
@@ -102,7 +104,7 @@ function signin(email, pwd){
         function(error){
             // 로그인에 실패할 경우 발생
             // TODO :: 에러문구를 보이도록 한다.
-
+            showErrorLog();  
 
             // 로딩을 제거한다.
             hideLoading();
@@ -117,7 +119,7 @@ $("#login-btn").click(
             // 로그인 활성화 시 실행
 
             // TODO :: 회원가입을 실행한다.
-            
+            signup();            
         }
     }
 )
@@ -211,6 +213,7 @@ function chatDBListenner(){
 
             // 다란 사용자의 채팅을 WEB에 보여준다.
             // TODO :: 다른 사용자의 채팅 내용을 말풍선으로 보이도록 한다.
+            makeOtherChat();
             // receiveChatData.nickName 에 다른 사용자의 닉네임이 담겨있음.
             // receiveChatData.contents 에 다른 사용자의 채팅 내용이 담겨있음.
 
