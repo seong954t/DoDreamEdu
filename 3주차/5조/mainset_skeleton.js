@@ -195,15 +195,17 @@ function hideLoading(){
 // 채팅화면이 사라지게 한다.
 function hideChatWrapper(){
     // TODO :: id가 kakao-chat-wrapper인 엘리먼트에 show-kakao-chat-wrapper 클래스를 제거한다.
+    $("#kakao-chat-wrapper").removeClass('show-kakao-chat-wrapper');
     // TODO :: id가 kakao-chat-wrapper인 엘리먼트에 hide-kakao-chat-wrapper 클래스를 추가한다.
-    document.getElementById('kakao-chat-wrapper').classList.toggle('hide-kakao-chat-wrapper');
+    $("#kakao-chat-wrapper").addClass('hide-kakao-chat-wrapper');
 }
 
 // 로그인 화면이 나타나게 한다.
 function showKakaoLoginWrapper(){
     // TODO :: id가 kakao-wrapper인 엘리먼트에 show-kakao-wrapper 클래스를 추가한다.
+    $("#kakao-chat-wrapper").addClass('show-kakao-chat-wrapper');
     // TODO :: id가 kakao-wrapper인 엘리먼트에 hide-kakao-wrapper 클래스를 제거한다.
-    document.getElementById('kakao-chat-wrapper').classList.toggle('show-kakao-chat-wrapper');
+    $("#kakao-chat-wrapper").removeClass('hide-kakao-chat-wrapper');
 }
 
 // 로그아웃 시 기존 채팅 데이터를 제거한다.
