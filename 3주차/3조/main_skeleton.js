@@ -37,10 +37,12 @@ $('.kakao-login').keyup(function(event){
             // TODO :: 로그인 버튼 색상을 로그인 가능하도록 변경
             enableLogin();
             
+            
         }else{
             // 비밀번호가 6글자 미만일 경우 색상을 로그인 불가능하도록 변경
             // TODO :: 로그인 버튼 색상을 로그인 불가능하도록 변경
             disableLogin();
+            
         }
     }
 });
