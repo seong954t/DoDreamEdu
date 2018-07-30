@@ -362,7 +362,7 @@ $("#text-send").click(
         
     }
 )
-
+//hengmo
 // 채팅 내용을 DB에 업로드 한다.
 function upLoadChat(contents){
     // 닉네임과 함께 데이터를 저장하기 위해 닉네임을 얻은 후 실행한다.
@@ -378,11 +378,11 @@ function upLoadChat(contents){
             uid: getCurrentUid()
         });
     });
-    
+
     // 채팅 내용을 WEB에 보여준다.
     // TODO :: 자신의 채팅 내용을 말풍선으로 보이도록 한다.
     // contents 에 자신의 채팅 내용이 담겨있음.
-    
+    makeMyChat(contents);
 }
 
 // 수정 버튼 클릭시 실행
