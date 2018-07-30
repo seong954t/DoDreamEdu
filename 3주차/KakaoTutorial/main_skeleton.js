@@ -30,23 +30,23 @@ $('.kakao-login').keyup(function(event){
         // Enter 이 외 입력 시 실행
         function hideErrorLog(){
             $("#login-err").hide()// 로그인 실패 문구 제거
-        // TODO :: 에러문구를 제거한다.
-        hideErrorLog()
+            // TODO :: 에러문구를 제거한다.
+            hideErrorLog()
 
 
-        if(getPassword().length > 5){
-            // 비밀번호가 6글자 이상일 경우 색상을 로그인 가능하도록 변경
-            // TODO :: 로그인 버튼 색상을 로그인 가능하도록 변경
-            enableLogin()
+            if(getPassword().length > 5){
+                // 비밀번호가 6글자 이상일 경우 색상을 로그인 가능하도록 변경
+                // TODO :: 로그인 버튼 색상을 로그인 가능하도록 변경
 
-            enableLogin()// TODO :: 로그인 버튼 색상을 로그인 가능하도록 변경
-            
-        }else{
-            // 비밀번호가 6글자 미만일 경우 색상을 로그인 불가능하도록 변경
-            disableLogin()// TODO :: 로그인 버튼 색상을 로그인 불가능하도록 변경
-            
+                enableLogin()// TODO :: 로그인 버튼 색상을 로그인 가능하도록 변경
+            }else{
+                // 비밀번호가 6글자 미만일 경우 색상을 로그인 불가능하도록 변경
+                disableLogin()// TODO :: 로그인 버튼 색상을 로그인 불가능하도록 변경
+                
+            }
         }
     }
+
 });
 
 // 회원가입을 진행한다.
