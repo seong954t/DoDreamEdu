@@ -164,9 +164,9 @@ function hideKakaoLoginWrapper(){
 // 채팅화면이 나타나게 한다.
 function showChatWrapper(){
     // TODO :: id가 kakao-chat-wrapper인 엘리먼트에 show-kakao-chat-wrapper 클래스를 추가한다.
-    $('#kakao-wrapper').addClass('show-kakao-wrapper');
+    $('#kakao-wrapper').addClass('show-kakao-chat-wrapper');
     // TODO :: id가 kakao-chat-wrapper인 엘리먼트에 hide-kakao-chat-wrapper 클래스를 제거한다.
-    $('#kakao-wrapper').removeClass('hide-kakao-wrapper');
+    $('#kakao-wrapper').removeClass('hide-kakao-chat-wrapper');
 }
 
 // 로그인 화면 입력 값을 초기화한다.
