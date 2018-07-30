@@ -292,7 +292,7 @@ function sendText(){
 
         // 전송이 불가능하도록 변경
         // TODO :: 전송이 불가능하도록 전송 버튼을 비활성화 한다.
-        
+        disableTextSend();
     }
 }
 
@@ -302,13 +302,13 @@ $("#input-chat").keyup(function(event){
         // Backspace 입력 시 글자수가 없으면 전송이 불가능하도록 변경
         if(getInputChat().length <= 1){
             // TODO :: 전송이 불가능하도록 전송 버튼을 비활성화 한다.
-            
+            disableTextSend();
         }
     }else{
         // Backspace 입력 시 글자수가 있으면 전송이 가능하도록 변경
         if(getInputChat().length > 0){
             // TODO :: 전송이 가능하도록 전송 버튼을 활성화 한다.
-            
+            enableTextSend();
         }
     }
 })
@@ -325,17 +325,17 @@ $("#input-chat").keypress(function(event){
             event.preventDefault();
 
             // TODO :: 채팅 내용을 전송한다.
-            
+            sendText();
         }
     }else{
         if(getInputChat().length > 0){
             // 채팅 입력 시 글자수가 있으면 전송이 가능하도록 변경
             // TODO :: 전송이 가능하도록 전송 버튼을 활성화 한다.
-            
+            enableTextSend();
         }else{
             // 채팅 입력 시 글자수가 없으면 전송이 불가능하도록 변경
             // TODO :: 전송이 불가능하도록 전송 버튼을 비활성화 한다.
-            
+            disableTextSend();
         }
     }
 })
@@ -345,7 +345,7 @@ $("#text-send").click(
     function(){
         // 채팅 데이터 전송
         // TODO :: 채팅 내용을 전송한다.
-
+        sendText();
     }
 )
 
@@ -367,6 +367,7 @@ function upLoadChat(contents){
 
     // 채팅 내용을 WEB에 보여준다.
     // TODO :: 자신의 채팅 내용을 말풍선으로 보이도록 한다.
+    makeMyChat(contents);
     // contents 에 자신의 채팅 내용이 담겨있음.
     
 }
