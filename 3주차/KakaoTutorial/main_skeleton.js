@@ -35,11 +35,11 @@ $('.kakao-login').keyup(function(event){
         if(getPassword().length > 5){
             // 비밀번호가 6글자 이상일 경우 색상을 로그인 가능하도록 변경
             // TODO :: 로그인 버튼 색상을 로그인 가능하도록 변경
-            
+
         }else{
             // 비밀번호가 6글자 미만일 경우 색상을 로그인 불가능하도록 변경
             // TODO :: 로그인 버튼 색상을 로그인 불가능하도록 변경
-            
+
         }
     }
 });
@@ -70,18 +70,18 @@ function signup(){
             if(error.code == "auth/email-already-in-use"){
                 // 이미 해당 회원이 있으면 로그인을 진행한다.
                 // TODO :: 로그인 함수를 실행한다(email, pwd 함께 전달).
-                
+
                 return;
             }else if(error.code == "auth/invalid-email"){
                 // 사용불가능한 이메일일 경우 발생한다.
                 // 에러문구 발생
                 // TODO :: 에러문구를 보이도록 한다.
-                
+
             }else if(error.code == "auth/weak-password"){
                 // 사용불가능한 비밀번호일 경우 발생한다.
                 // 에러문구 발생
                 // TODO :: 에러문구를 보이도록 한다.
-                
+
             }
             // 로딩을 제거한다.
             hideLoading();
@@ -99,8 +99,8 @@ function signin(email, pwd){
         function(error){
             // 로그인에 실패할 경우 발생
             // TODO :: 에러문구를 보이도록 한다.
-
-
+            console.log(error);
+            alert("로그인 실패");
             // 로딩을 제거한다.
             hideLoading();
         }
@@ -114,7 +114,6 @@ $("#login-btn").click(
             // 로그인 활성화 시 실행
 
             // TODO :: 회원가입을 실행한다.
-            
         }
     }
 )
@@ -189,7 +188,7 @@ function onlineCheck(){
 
             // 해당 사용자의 connection이 끊어지면 false로 변경시켜준다.
             myConnectionsRef.onDisconnect().set(false);
-            
+
         }
     })
 }
@@ -201,13 +200,14 @@ function chatDBListenner(){
     .startAt(Date.now()+"")
     .on('child_added', function(success){
         var receiveChatData = success.val();
-        
+
         if(receiveChatData.uid != getCurrentUid()){
             // 자신의 Uid와 다를 경우 실행된다.
             // 다른 사용자의 채팅을 감지한다.
 
-            // 다란 사용자의 채팅을 WEB에 보여준다.
+            // 다른 사용자의 채팅을 WEB에 보여준다.
             // TODO :: 다른 사용자의 채팅 내용을 말풍선으로 보이도록 한다.
+            $("#chat-contents-wrapper").text(data.val());
             // receiveChatData.nickName 에 다른 사용자의 닉네임이 담겨있음.
             // receiveChatData.contents 에 다른 사용자의 채팅 내용이 담겨있음.
 
@@ -221,7 +221,7 @@ function UsersConnectionChangeListenner(){
     .database()
     .ref('UsersConnection/')
     .on(
-        'child_changed', 
+        'child_changed',
         function(snap){
             // 데이터의 변화가 감지되면 현재 입장한 사용자 데이터를 업데이트한다.
             getOnlineUser();
@@ -238,7 +238,7 @@ function UsersConnectionAddListenner(){
     .database()
     .ref('UsersConnection/')
     .on(
-        'child_added', 
+        'child_added',
         function(snap){
             // 새로운 데이터가 추가되면 현재 입장한 사용자 데이터를 업데이트한다.
             getOnlineUser();
@@ -258,7 +258,7 @@ function getOnlineUser(){
         .orderByChild("connection")
         .equalTo(true)
         .once(
-            'value', 
+            'value',
             function(snap){
                 // 입장 인원을 WEB에 보여준다.
                 var onlineUser = Object.keys(snap.val()).length;
@@ -292,7 +292,7 @@ function sendText(){
 
         // 전송이 불가능하도록 변경
         // TODO :: 전송이 불가능하도록 전송 버튼을 비활성화 한다.
-        
+
     }
 }
 
@@ -302,13 +302,13 @@ $("#input-chat").keyup(function(event){
         // Backspace 입력 시 글자수가 없으면 전송이 불가능하도록 변경
         if(getInputChat().length <= 1){
             // TODO :: 전송이 불가능하도록 전송 버튼을 비활성화 한다.
-            
+
         }
     }else{
         // Backspace 입력 시 글자수가 있으면 전송이 가능하도록 변경
         if(getInputChat().length > 0){
             // TODO :: 전송이 가능하도록 전송 버튼을 활성화 한다.
-            
+
         }
     }
 })
@@ -316,26 +316,26 @@ $("#input-chat").keyup(function(event){
 // 채팅창에서 키보드 입력을 컨트롤 한다.
 $("#input-chat").keypress(function(event){
 
-    if (event.keyCode == 13) {   
+    if (event.keyCode == 13) {
         // Enter 입력 시 실행
-        // shift + enter가 함께 입력되었는지 확인한다. 
+        // shift + enter가 함께 입력되었는지 확인한다.
         // shift + enter가 줄바꿈이 일어나도록 처리하기 위함
         if(!event.shiftKey){
             // shift가 함께 입력되지 않았으면 채팅 전송이 이루어진다.
             event.preventDefault();
 
             // TODO :: 채팅 내용을 전송한다.
-            
+
         }
     }else{
         if(getInputChat().length > 0){
             // 채팅 입력 시 글자수가 있으면 전송이 가능하도록 변경
             // TODO :: 전송이 가능하도록 전송 버튼을 활성화 한다.
-            
+
         }else{
             // 채팅 입력 시 글자수가 없으면 전송이 불가능하도록 변경
             // TODO :: 전송이 불가능하도록 전송 버튼을 비활성화 한다.
-            
+
         }
     }
 })
@@ -368,7 +368,7 @@ function upLoadChat(contents){
     // 채팅 내용을 WEB에 보여준다.
     // TODO :: 자신의 채팅 내용을 말풍선으로 보이도록 한다.
     // contents 에 자신의 채팅 내용이 담겨있음.
-    
+
 }
 
 // 수정 버튼 클릭시 실행
@@ -406,7 +406,7 @@ $("#logout-btn").click(
             // 사용사 접속 여부 변경
             var myConnectionsRef = firebase.database().ref('UsersConnection/'+getCurrentUid()+'/connection');
             myConnectionsRef.set(false);
-            
+
             // 로그아웃 실행
             firebase.auth().signOut();
 
