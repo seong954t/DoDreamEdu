@@ -8,30 +8,61 @@
 // 로그인 시 입력한 이메일을 가져온다.
 function getEmail(){
     // TODO :: id가 kakao-email인 엘리먼트의 값을 가져와 반환한다.
+<<<<<<< HEAD
+    return $("#kakao-email").val()
+=======
 
     
     return ''
 
+<<<<<<< HEAD
+=======
+>>>>>>> 9eaa9c7726fb1693aa336606f4584d4f2ddd429f
+}
+>>>>>>> 8334317aa676a9ce2e0bb41eee509c8f53b9e041
 
 // 로그인 시 입력한 비밀번호를 가져온다.
 function getPassword(){
     // TODO :: id가 kakao-pw인 엘리먼트의 값을 가져와 반환한다.
+<<<<<<< HEAD
+    return $("#kakao-pw").val()
+=======
 
     
     return ''
 
+<<<<<<< HEAD
+=======
+>>>>>>> 9eaa9c7726fb1693aa336606f4584d4f2ddd429f
+}
+>>>>>>> 8334317aa676a9ce2e0bb41eee509c8f53b9e041
 
 // 로그인이 가능하도록 변경한다.
 function enableLogin(){
     $("#login-btn").addClass("enable-login") // TODO :: id가 login-btn인 엘리먼트에 enable-login 클래스를 추가한다.
     $("#login-btn").removeClass("disable-login")    // TODO :: id가 login-btn인 엘리먼트에 disable-login 클래스를 제거한다.
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
+>>>>>>> 9eaa9c7726fb1693aa336606f4584d4f2ddd429f
+}
+>>>>>>> 8334317aa676a9ce2e0bb41eee509c8f53b9e041
 
 // 로그인이 불가능하도록 변경한다.
 function disableLogin(){
     $("#login-btn").addClass("enable-login")// TODO :: id가 login-btn인 엘리먼트에 enable-login 클래스를 제거한다.
     $("#login-btn").removeClass("disable-login") // TODO :: id가 login-btn인 엘리먼트에 disable-login 클래스를 추가한다.
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 9eaa9c7726fb1693aa336606f4584d4f2ddd429f
+}
+>>>>>>> 8334317aa676a9ce2e0bb41eee509c8f53b9e041
 
 // 로그인 에러 문구를 띄운다.
 function showErrorLog(){
@@ -60,21 +91,33 @@ function hideErrorLog(){
 // 전송 버튼을 비활성화 시킨다.
 function disableTextSend(){
     // TODO :: id가 text-send인 엘리먼트에 disable-text-send 클래스를 추가한다.
+<<<<<<< HEAD
+    $("#text-send").addClass("disable-text-send")
+    // TODO :: id가 text-send인 엘리먼트에 enable-text-send 클래스를 제거한다.
+    $("#text-send").removeClass("enable-text-send")
+=======
 
     $("#text-send").addClass("disable-text-send")
     // TODO :: id가 text-send인 엘리먼트에 enable-text-send 클래스를 제거한다.
     $("#text-send").removeClass("enable-text-send")
 
+>>>>>>> 9eaa9c7726fb1693aa336606f4584d4f2ddd429f
 }
 
 // 전송 버튼을 활성화 시킨다.
 function enableTextSend(){
     // TODO :: id가 text-send인 엘리먼트에 disable-text-send 클래스를 제거한다.
+<<<<<<< HEAD
+    $("#text-send").removeClass("disable-text-send")
+    // TODO :: id가 text-send인 엘리먼트에 enable-text-send 클래스를 추가한다.
+    $("#text-send").addClass("enable-text-send")
+=======
 
     $("#text-send").removeClass("disable-text-send")
     // TODO :: id가 text-send인 엘리먼트에 enable-text-send 클래스를 추가한다.
     $("#text-send").addClass("enable-text-send")
 
+>>>>>>> 9eaa9c7726fb1693aa336606f4584d4f2ddd429f
 }
 
 // 채팅 내용을 가져온다.
@@ -83,7 +126,10 @@ function getInputChat(){
 
     $("#input-chat").val()
     return $("#input-chat").val()
+<<<<<<< HEAD
+=======
 
+>>>>>>> 9eaa9c7726fb1693aa336606f4584d4f2ddd429f
 }
 
 // 나의 채팅 내용을 브라우저에 보이도록 한다.
@@ -96,11 +142,17 @@ function makeMyChat(contents){
         "</div>"
     )
     // TODO :: 채팅 스크롤을 하단으로 내리도록 한다.
+<<<<<<< HEAD
+    function scrollBottom(){
+        $("#chat-contents-wrapper").stop().animate({ scrollTop: $("#chat-contents-wrapper")[0].scrollHeight }, "slow");
+    }
+=======
 
     function scrollBottom(){
         $("#chat-contents-wrapper").stop().animate({ scrollTop: $("#chat-contents-wrapper")[0].scrollHeight }, "slow");
     }
 
+>>>>>>> 9eaa9c7726fb1693aa336606f4584d4f2ddd429f
     
 }
 
@@ -115,11 +167,18 @@ function makeOtherChat(nickName, contents){
         "</div>"
     )
     // TODO :: 채팅 스크롤을 하단으로 내리도록 한다.
+<<<<<<< HEAD
+
+    function scrollBottom(){
+        $("#chat-contents-wrapper").stop().animate({ scrollTop: $("#chat-contents-wrapper")[0].scrollHeight }, "slow");
+    }   
+=======
     function scrollBottom(){
         $("#chat-contents-wrapper").stop().animate({ scrollTop: $("#chat-contents-wrapper")[0].scrollHeight }, "slow");
     }
 
     
+>>>>>>> 9eaa9c7726fb1693aa336606f4584d4f2ddd429f
 }
 
 // 채팅 스크롤을 가장 아래로 가게 한다.
