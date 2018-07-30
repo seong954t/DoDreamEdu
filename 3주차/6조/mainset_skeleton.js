@@ -11,7 +11,7 @@ function getEmail(){
 
     return $("#kakao-email").val()
 
-
+}
 // 로그인 시 입력한 비밀번호를 가져온다.
 function getPassword(){
     // TODO :: id가 kakao-pw인 엘리먼트의 값을 가져와 반환한다.
