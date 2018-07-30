@@ -28,8 +28,10 @@ $('.kakao-login').keyup(function(event){
         $('#login-btn').click();
     }else{
         // Enter 이 외 입력 시 실행
-        // 로그인 실패 문구 제거
+        function hideErrorLog(){
+            $("#login-err").hide()// 로그인 실패 문구 제거
         // TODO :: 에러문구를 제거한다.
+        hideErrorLog()
 
 
         if(getPassword().length > 5){
@@ -51,8 +53,8 @@ function signup(){
     // 회원가입할 이메일과 비밀번호를 통해 회원가입을 진행한다.
 
     // TODO :: createUserWithEmailAndPassword의 인자로 전달 할 Email과 Password의 값을 가져온다.
-    var email = ""
-    var pwd = ""
+    var email = getEmail()
+    var pwd = getPassword()
 
     firebase.auth().createUserWithEmailAndPassword(email, pwd)
     .then(
@@ -112,7 +114,21 @@ $("#login-btn").click(
     function(){
         if($("#login-btn").hasClass("enable-login")){
             // 로그인 활성화 시 실행
-
+            firebase.auth().createUserWithEmailAndPassword
+            // (사용자 이메일, 사용자 비밀번호)
+.then(
+    function(user){
+        // 기존 회원가입이 없는 최초 회원가입일 경우 진행된다.
+    },
+    function(error){
+        if(error.code == "auth/email-already-in-use"){
+            // 이미 해당 회원이 있는 경우 진행된다.
+        }else if(error.code == "auth/invalid-email"){
+            // 사용불가능한 이메일일 경우 진행된다.
+        }else if(error.code == "auth/weak-password"){
+            // 사용불가능한 비밀번호일 경우 진행된다.
+        }else{
+            // 이 외의 경우 추가적으로 있음
             // TODO :: 회원가입을 실행한다.
             
         }
