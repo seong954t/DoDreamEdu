@@ -409,7 +409,9 @@ $("#logout-btn").click(
             
             // 로그아웃 실행
             firebase.auth().signOut();
-
+            
+            firebase.database().ref("chat/").off();
+            firebase.database().ref("UsersConnection/").off();
             // 로그인 화면으로 변경
             showLoginHideChat();
         }
