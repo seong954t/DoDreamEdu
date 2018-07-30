@@ -19,16 +19,18 @@ function getPassword(){
 
 // 로그인이 가능하도록 변경한다.
 function enableLogin(){
+    $("login-btn").addClass("enable-login"); // 준혁
     // TODO :: id가 login-btn인 엘리먼트에 enable-login 클래스를 추가한다.
-
+    $("login-btn").removeClass("disable-login"); // 준혁
     // TODO :: id가 login-btn인 엘리먼트에 disable-login 클래스를 제거한다.
     
 }
 
 // 로그인이 불가능하도록 변경한다.
 function disableLogin(){
+    $("login-btn").reoveClass("enable-login"); // 준혁
     // TODO :: id가 login-btn인 엘리먼트에 enable-login 클래스를 제거한다.
-
+    $("login-btn").addClass("disable-login"); // 준혁
     // TODO :: id가 login-btn인 엘리먼트에 disable-login 클래스를 추가한다.
     
 }
