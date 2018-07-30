@@ -8,64 +8,27 @@
 // 로그인 시 입력한 이메일을 가져온다.
 function getEmail(){
     // TODO :: id가 kakao-email인 엘리먼트의 값을 가져와 반환한다.
-<<<<<<< HEAD
+
     return $("#kakao-email").val()
-=======
-<<<<<<< HEAD
-    return $("#kakao-email").val()
-=======
-    return ''
->>>>>>> 0aca7b2eb8a5fe7ea62a1481940b37fb4c05eb12
->>>>>>> 3920940d0ffdc224a39c2399dd6ea85d9bb16f0f
-}
+
 
 // 로그인 시 입력한 비밀번호를 가져온다.
 function getPassword(){
     // TODO :: id가 kakao-pw인 엘리먼트의 값을 가져와 반환한다.
-<<<<<<< HEAD
     return $("#kakao-pw").val()
-=======
-<<<<<<< HEAD
-    return $("#kakao-pw").val()
-=======
-    return ''
->>>>>>> 0aca7b2eb8a5fe7ea62a1481940b37fb4c05eb12
->>>>>>> 3920940d0ffdc224a39c2399dd6ea85d9bb16f0f
-}
+
 
 // 로그인이 가능하도록 변경한다.
 function enableLogin(){
-<<<<<<< HEAD
     $("#login-btn").addClass("enable-login") // TODO :: id가 login-btn인 엘리먼트에 enable-login 클래스를 추가한다.
     $("#login-btn").removeClass("disable-login")    // TODO :: id가 login-btn인 엘리먼트에 disable-login 클래스를 제거한다.
-=======
-<<<<<<< HEAD
-    $("#login-btn").addClass("enable-login") // TODO :: id가 login-btn인 엘리먼트에 enable-login 클래스를 추가한다.
-    $("#login-btn").removeClass("disable-login")    // TODO :: id가 login-btn인 엘리먼트에 disable-login 클래스를 제거한다.
-=======
-    // TODO :: id가 login-btn인 엘리먼트에 enable-login 클래스를 추가한다.
-
-    // TODO :: id가 login-btn인 엘리먼트에 disable-login 클래스를 제거한다.
->>>>>>> 0aca7b2eb8a5fe7ea62a1481940b37fb4c05eb12
->>>>>>> 3920940d0ffdc224a39c2399dd6ea85d9bb16f0f
     
 }
 
 // 로그인이 불가능하도록 변경한다.
 function disableLogin(){
-<<<<<<< HEAD
     $("#login-btn").addClass("enable-login")// TODO :: id가 login-btn인 엘리먼트에 enable-login 클래스를 제거한다.
     $("#login-btn").removeClass("disable-login") // TODO :: id가 login-btn인 엘리먼트에 disable-login 클래스를 추가한다.
-=======
-<<<<<<< HEAD
-    $("#login-btn").addClass("enable-login")// TODO :: id가 login-btn인 엘리먼트에 enable-login 클래스를 제거한다.
-    $("#login-btn").removeClass("disable-login") // TODO :: id가 login-btn인 엘리먼트에 disable-login 클래스를 추가한다.
-=======
-    // TODO :: id가 login-btn인 엘리먼트에 enable-login 클래스를 제거한다.
-
-    // TODO :: id가 login-btn인 엘리먼트에 disable-login 클래스를 추가한다.
->>>>>>> 0aca7b2eb8a5fe7ea62a1481940b37fb4c05eb12
->>>>>>> 3920940d0ffdc224a39c2399dd6ea85d9bb16f0f
     
 }
 

@@ -28,9 +28,7 @@ $('.kakao-login').keyup(function(event){
         $('#login-btn').click();
     }else{
         // Enter 이 외 입력 시 실행
-        function hideErrorLog(){
-            $("#login-err").hide();
-        }// 로그인 실패 문구 제거
+        // 로그인 실패 문구 제거
         // TODO :: 에러문구를 제거한다.
 
 
