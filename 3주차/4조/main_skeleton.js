@@ -302,7 +302,7 @@ function sendText(){
 
         // 전송이 불가능하도록 변경
         // TODO :: 전송이 불가능하도록 전송 버튼을 비활성화 한다.
-        
+        disableTextSend();
     }
 }
 
@@ -312,13 +312,13 @@ $("#input-chat").keyup(function(event){
         // Backspace 입력 시 글자수가 없으면 전송이 불가능하도록 변경
         if(getInputChat().length <= 1){
             // TODO :: 전송이 불가능하도록 전송 버튼을 비활성화 한다.
-            
+            disableTextSend();
         }
     }else{
         // Backspace 입력 시 글자수가 있으면 전송이 가능하도록 변경
         if(getInputChat().length > 0){
             // TODO :: 전송이 가능하도록 전송 버튼을 활성화 한다.
-            
+            enableTextSend();
         }
     }
 })
@@ -355,7 +355,7 @@ $("#text-send").click(
     function(){
         // 채팅 데이터 전송
         // TODO :: 채팅 내용을 전송한다.
-
+        
     }
 )
 
