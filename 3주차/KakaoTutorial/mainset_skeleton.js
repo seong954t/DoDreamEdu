@@ -62,7 +62,7 @@ function hideErrorLog(){
 // 전송 버튼을 비활성화 시킨다.
 function disableTextSend(){
     // TODO :: id가 text-send인 엘리먼트에 disable-text-send 클래스를 추가한다.
-
+    
     $("#text-send").addClass("disable-text-send")
     // TODO :: id가 text-send인 엘리먼트에 enable-text-send 클래스를 제거한다.
     $("#text-send").removeClass("enable-text-send")
