@@ -323,6 +323,7 @@ $("#input-chat").keyup(function(event){
     }
 })
 
+//jjuya
 // 채팅창에서 키보드 입력을 컨트롤 한다.
 $("#input-chat").keypress(function(event){
 
@@ -335,17 +336,19 @@ $("#input-chat").keypress(function(event){
             event.preventDefault();
 
             // TODO :: 채팅 내용을 전송한다.
+            sendText();
             
         }
     }else{
         if(getInputChat().length > 0){
             // 채팅 입력 시 글자수가 있으면 전송이 가능하도록 변경
             // TODO :: 전송이 가능하도록 전송 버튼을 활성화 한다.
+            enableTextSend();
             
         }else{
             // 채팅 입력 시 글자수가 없으면 전송이 불가능하도록 변경
             // TODO :: 전송이 불가능하도록 전송 버튼을 비활성화 한다.
-            
+            disableTextSend();
         }
     }
 })
