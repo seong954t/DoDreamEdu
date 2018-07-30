@@ -44,6 +44,7 @@ $('.kakao-login').keyup(function(event){
 });
 
 // 회원가입을 진행한다.
+//회원가입
 function signup(){
     // 로딩을 띄운다.
     showLoading();
