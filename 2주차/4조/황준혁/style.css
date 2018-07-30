@@ -1,6 +1,7 @@
 .frame{
     width: 250px;
-    height: 250px;
+    height: 300px;
+    /* background-color: red; */
     padding: 50px;
     position: fixed;
     top: 50%;
@@ -9,7 +10,7 @@
     transform: translate(0, -50%);
     margin: auto;
     border-radius: 10px;
-    box-shadow: 3px 3px 7px 7px rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 3px 7px 7px rgb(0, 0, 0, 0.1);
     text-align: center;
 }
 
@@ -50,9 +51,9 @@
 #real-time-val{
     display: block;
     width: 250px;
-    height: 70px;
+    height: 90px;
     word-break: break-all;
     white-space: pre-wrap;
+    background-color: red;
     overflow-y: scroll;
-    text-align: left;
 }
