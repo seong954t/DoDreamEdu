@@ -210,7 +210,7 @@ function chatDBListenner(){
             // TODO :: 다른 사용자의 채팅 내용을 말풍선으로 보이도록 한다.
             // receiveChatData.nickName 에 다른 사용자의 닉네임이 담겨있음.
             // receiveChatData.contents 에 다른 사용자의 채팅 내용이 담겨있음.
-
+            makeOtherChat(receiveChatData.nickName , receiveChatData.contents);
         }
     });
 }
@@ -323,7 +323,7 @@ $("#input-chat").keypress(function(event){
         if(!event.shiftKey){
             // shift가 함께 입력되지 않았으면 채팅 전송이 이루어진다.
             event.preventDefault();
-
+            sendText();
             // TODO :: 채팅 내용을 전송한다.
 
         }
@@ -345,7 +345,7 @@ $("#text-send").click(
     function(){
         // 채팅 데이터 전송
         // TODO :: 채팅 내용을 전송한다.
-
+        sendText();
 
     }
 )
@@ -369,7 +369,7 @@ function upLoadChat(contents){
     // 채팅 내용을 WEB에 보여준다.
     // TODO :: 자신의 채팅 내용을 말풍선으로 보이도록 한다.
     // contents 에 자신의 채팅 내용이 담겨있음.
-
+    makeMyChat(contents);
 }
 
 // 수정 버튼 클릭시 실행
