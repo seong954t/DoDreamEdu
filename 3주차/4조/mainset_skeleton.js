@@ -219,5 +219,6 @@ function showKakaoLoginWrapper(){
 
 // 로그아웃 시 기존 채팅 데이터를 제거한다.
 function removeChatData(){
+    firebase.database().ref("chat/").off();
     $("#chat-contents-wrapper").children().remove();
 }
