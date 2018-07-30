@@ -30,13 +30,12 @@ $('.kakao-login').keyup(function(event){
         // Enter 이 외 입력 시 실행
         // 로그인 실패 문구 제거
         // TODO :: 에러문구를 제거한다.
-
+        hideErrorLog();
 
         if(getPassword().length > 5){
             // 비밀번호가 6글자 이상일 경우 색상을 로그인 가능하도록 변경
             // TODO :: 로그인 버튼 색상을 로그인 가능하도록 변경
             enableLogin();
-            
         }else{
             // 비밀번호가 6글자 미만일 경우 색상을 로그인 불가능하도록 변경
             // TODO :: 로그인 버튼 색상을 로그인 불가능하도록 변경
@@ -74,18 +73,18 @@ function signup(){
             if(error.code == "auth/email-already-in-use"){
                 // 이미 해당 회원이 있으면 로그인을 진행한다.
                 // TODO :: 로그인 함수를 실행한다(email, pwd 함께 전달).
-                
+                signin(email,pwd);
                 return;
             }else if(error.code == "auth/invalid-email"){
                 // 사용불가능한 이메일일 경우 발생한다.
                 // 에러문구 발생
                 // TODO :: 에러문구를 보이도록 한다.
-                
+                showErrorLog();
             }else if(error.code == "auth/weak-password"){
                 // 사용불가능한 비밀번호일 경우 발생한다.
                 // 에러문구 발생
                 // TODO :: 에러문구를 보이도록 한다.
-               // alert("")
+                showErrorLog()
             }
             // 로딩을 제거한다.
             hideLoading();
@@ -103,8 +102,8 @@ function signin(email, pwd){
         function(error){
             // 로그인에 실패할 경우 발생
             // TODO :: 에러문구를 보이도록 한다.
-            alert("로그인에 실패하였습니다.");
 
+            showErrorLog();
             // 로딩을 제거한다.
             hideLoading();
         }
@@ -215,7 +214,7 @@ function chatDBListenner(){
             makeOtherChat(receiveChatData.nickName, receiveChatData.contents);
             // receiveChatData.nickName 에 다른 사용자의 닉네임이 담겨있음.
             // receiveChatData.contents 에 다른 사용자의 채팅 내용이 담겨있음.
-
+            makeOtherChat(nickName,contents);
         }
     });
 }
@@ -375,7 +374,7 @@ function upLoadChat(contents){
     // TODO :: 자신의 채팅 내용을 말풍선으로 보이도록 한다.
     makeMyChat(contents);
     // contents 에 자신의 채팅 내용이 담겨있음.
-    
+    makeMyChat(contents);
 }
 
 // 수정 버튼 클릭시 실행
