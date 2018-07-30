@@ -51,7 +51,7 @@ function signup(){
     // 회원가입할 이메일과 비밀번호를 통해 회원가입을 진행한다.
 
     // TODO :: createUserWithEmailAndPassword의 인자로 전달 할 Email과 Password의 값을 가져온다.
-    var email =  getEmail();
+    var email = getEmail();
     var pwd = getPassword();
 
     firebase.auth().createUserWithEmailAndPassword(email, pwd)
