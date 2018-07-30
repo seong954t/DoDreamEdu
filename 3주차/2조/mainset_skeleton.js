@@ -20,17 +20,17 @@ function getPassword(){
 // 로그인이 가능하도록 변경한다.
 function enableLogin(){
     // TODO :: id가 login-btn인 엘리먼트에 enable-login 클래스를 추가한다.
-
+    $("#login-btn").addClass("enable-login");
     // TODO :: id가 login-btn인 엘리먼트에 disable-login 클래스를 제거한다.
-
+    $("#login-btn").removeClass("disable-login");
 }
 
 // 로그인이 불가능하도록 변경한다.
 function disableLogin(){
     // TODO :: id가 login-btn인 엘리먼트에 enable-login 클래스를 제거한다.
-
+    $("#login-btn").removeClass("enable-login");
     // TODO :: id가 login-btn인 엘리먼트에 disable-login 클래스를 추가한다.
-
+    $("#login-btn").addClass("disable-login");
 }
 
 // 로그인 에러 문구를 띄운다.
@@ -42,6 +42,7 @@ function showErrorLog(){
 function hideErrorLog(){
     $("#login-err").hide();
 }
+
 
 // ---------------------------- 채팅 화면 기능 ----------------------------
 // 로그인 이후 채팅 시 실행되어야 하는 함수들이 정의 되어있다.
@@ -195,17 +196,17 @@ function hideLoading(){
 // 채팅화면이 사라지게 한다.
 function hideChatWrapper(){
     // TODO :: id가 kakao-chat-wrapper인 엘리먼트에 show-kakao-chat-wrapper 클래스를 제거한다.
-
+    $("#kakao-chat-wrapper").removeClass("show-kakao-chat-wrapper");
     // TODO :: id가 kakao-chat-wrapper인 엘리먼트에 hide-kakao-chat-wrapper 클래스를 추가한다.
-
+    $("#kakao-chat-wrapper").addClass("hide-kakao-chat-wrapper");
 }
 
 // 로그인 화면이 나타나게 한다.
 function showKakaoLoginWrapper(){
     // TODO :: id가 kakao-wrapper인 엘리먼트에 show-kakao-wrapper 클래스를 추가한다.
-
+    $("#kakao-chat-wrapper").addClass("show-kakao-wrapper");
     // TODO :: id가 kakao-wrapper인 엘리먼트에 hide-kakao-wrapper 클래스를 제거한다.
-
+    $("#kakao-chat-wrapper").removeClass("hide-kakao-wrapper");
 }
 
 // 로그아웃 시 기존 채팅 데이터를 제거한다.
