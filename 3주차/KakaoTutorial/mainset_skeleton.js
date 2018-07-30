@@ -8,29 +8,29 @@
 // 로그인 시 입력한 이메일을 가져온다.
 function getEmail(){
     // TODO :: id가 kakao-email인 엘리먼트의 값을 가져와 반환한다.
-    return ''
+    return $("#kakao-email").show();
 }
 
 // 로그인 시 입력한 비밀번호를 가져온다.
 function getPassword(){
     // TODO :: id가 kakao-pw인 엘리먼트의 값을 가져와 반환한다.
-    return ''
+    return $("kakao-pw").show();
 }
 
 // 로그인이 가능하도록 변경한다.
 function enableLogin(){
     // TODO :: id가 login-btn인 엘리먼트에 enable-login 클래스를 추가한다.
-
+    $("#login-btn").addClass("enable-login");
     // TODO :: id가 login-btn인 엘리먼트에 disable-login 클래스를 제거한다.
-    
+    $("#login-btn").removeClass("disable-login");
 }
 
 // 로그인이 불가능하도록 변경한다.
 function disableLogin(){
     // TODO :: id가 login-btn인 엘리먼트에 enable-login 클래스를 제거한다.
-
+    $("#login-btn").addClass("enable-login")
     // TODO :: id가 login-btn인 엘리먼트에 disable-login 클래스를 추가한다.
-    
+    $("#login-btn").addClass("disable-login")
 }
 
 // 로그인 에러 문구를 띄운다.
