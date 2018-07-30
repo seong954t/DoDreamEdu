@@ -88,7 +88,7 @@ function signup(){
         }
     )
 }
-
+//hengmo_modify
 // 로그인을 진행한다.
 function signin(email, pwd){
     firebase.auth().signInWithEmailAndPassword(email, pwd)
@@ -99,7 +99,7 @@ function signin(email, pwd){
         function(error){
             // 로그인에 실패할 경우 발생
             // TODO :: 에러문구를 보이도록 한다.
-
+            console.log(error);
 
             // 로딩을 제거한다.
             hideLoading();
@@ -114,7 +114,7 @@ $("#login-btn").click(
             // 로그인 활성화 시 실행
 
             // TODO :: 회원가입을 실행한다.
-            
+            signup();
         }
     }
 )
