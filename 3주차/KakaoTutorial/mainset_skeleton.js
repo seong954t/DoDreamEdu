@@ -155,29 +155,31 @@ function getCurrentUid(){
 
 // 로그인 화면이 사라지게 한다.
 function hideKakaoLoginWrapper(){
+    $("#kakao-wrapper").removelass("show-kakao-wrapper")
     // TODO :: id가 kakao-wrapper인 엘리먼트에 show-kakao-wrapper 클래스를 제거한다.
-
+    $("#kakao-wrapper").addclass("hide-kakao-wrapper")
     // TODO :: id가 kakao-wrapper인 엘리먼트에 hide-kakao-wrapper 클래스를 추가한다.
 
 }
 
 // 채팅화면이 나타나게 한다.
 function showChatWrapper(){
+    $("#kakao-chat-wrapper").addclass("show-kakao-chat-wrapper")
     // TODO :: id가 kakao-chat-wrapper인 엘리먼트에 show-kakao-chat-wrapper 클래스를 추가한다.
-
+    $("#kakao-chat-wrapper").removelass("hide-kakao-chat-wrapper")
     // TODO :: id가 kakao-chat-wrapper인 엘리먼트에 hide-kakao-chat-wrapper 클래스를 제거한다.
     
 }
 
 // 로그인 화면 입력 값을 초기화한다.
 function resetLogin(){
-    $("#kakao-email").val("");
-    $("#kakao-pw").val("");
+    $("#kakao-email").val("");  // val은 앞에있는 이메일을 입력을 하면 그 후에 다시 빈칸으로 만든다는 의미이다.
+    $("#kakao-pw").val(""); // 패스워드도 마찬가지로 한번 입력하고 다시 빈칸으로 reset시킨다는 의미임.
 }
 
 // 로딩창을 띄운다.
 function showLoading(){
-    $("#spinner-warpper").show();
+    $("#spinner-warpper").show(); //보이거나 없애는 것에는 따로 인자를 쓸 필요가 없다. 보여지거나 없애기만 하는 것이기 때문 ㅋ
 }
 
 // 로딩창을 없앤다.
