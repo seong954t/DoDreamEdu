@@ -8,31 +8,29 @@
 // 로그인 시 입력한 이메일을 가져온다.
 function getEmail(){
     // TODO :: id가 kakao-email인 엘리먼트의 값을 가져와 반환한다.
-
-    return $("#kakao-email").val()
-
+    return ''
 }
 
 // 로그인 시 입력한 비밀번호를 가져온다.
 function getPassword(){
     // TODO :: id가 kakao-pw인 엘리먼트의 값을 가져와 반환한다.
-
-    return $("#kakao-pw").val()
-
+    return ''
 }
 
 // 로그인이 가능하도록 변경한다.
 function enableLogin(){
-    $("#login-btn").addClass("enable-login") // TODO :: id가 login-btn인 엘리먼트에 enable-login 클래스를 추가한다.
-    $("#login-btn").removeClass("disable-login")    // TODO :: id가 login-btn인 엘리먼트에 disable-login 클래스를 제거한다.
+    // TODO :: id가 login-btn인 엘리먼트에 enable-login 클래스를 추가한다.
 
+    // TODO :: id가 login-btn인 엘리먼트에 disable-login 클래스를 제거한다.
+    
 }
 
 // 로그인이 불가능하도록 변경한다.
 function disableLogin(){
-    $("#login-btn").addClass("enable-login")// TODO :: id가 login-btn인 엘리먼트에 enable-login 클래스를 제거한다.
-    $("#login-btn").removeClass("disable-login") // TODO :: id가 login-btn인 엘리먼트에 disable-login 클래스를 추가한다.
-  
+    // TODO :: id가 login-btn인 엘리먼트에 enable-login 클래스를 제거한다.
+
+    // TODO :: id가 login-btn인 엘리먼트에 disable-login 클래스를 추가한다.
+    
 }
 
 // 로그인 에러 문구를 띄운다.
@@ -62,10 +60,9 @@ function hideErrorLog(){
 // 전송 버튼을 비활성화 시킨다.
 function disableTextSend(){
     // TODO :: id가 text-send인 엘리먼트에 disable-text-send 클래스를 추가한다.
-    
+
     $("#text-send").addClass("disable-text-send")
     // TODO :: id가 text-send인 엘리먼트에 enable-text-send 클래스를 제거한다.
-    $("#text-send").removeClass("enable-text-send")
 
 }
 
@@ -73,19 +70,14 @@ function disableTextSend(){
 function enableTextSend(){
     // TODO :: id가 text-send인 엘리먼트에 disable-text-send 클래스를 제거한다.
 
-    $("#text-send").removeClass("disable-text-send")
     // TODO :: id가 text-send인 엘리먼트에 enable-text-send 클래스를 추가한다.
-    $("#text-send").addClass("enable-text-send")
-
+    
 }
 
 // 채팅 내용을 가져온다.
 function getInputChat(){
     // TODO :: id가 input-chat인 엘리먼트의 값을 가져와 반환한다.
-
-    $("#input-chat").val()
-    return $("#input-chat").val()
-
+    return ''
 }
 
 // 나의 채팅 내용을 브라우저에 보이도록 한다.
@@ -98,11 +90,6 @@ function makeMyChat(contents){
         "</div>"
     )
     // TODO :: 채팅 스크롤을 하단으로 내리도록 한다.
-
-    function scrollBottom(){
-        $("#chat-contents-wrapper").stop().animate({ scrollTop: $("#chat-contents-wrapper")[0].scrollHeight }, "slow");
-    }
-
     
 }
 
@@ -117,10 +104,6 @@ function makeOtherChat(nickName, contents){
         "</div>"
     )
     // TODO :: 채팅 스크롤을 하단으로 내리도록 한다.
-    function scrollBottom(){
-        $("#chat-contents-wrapper").stop().animate({ scrollTop: $("#chat-contents-wrapper")[0].scrollHeight }, "slow");
-    }
-
     
 }
 
@@ -173,31 +156,29 @@ function getCurrentUid(){
 
 // 로그인 화면이 사라지게 한다.
 function hideKakaoLoginWrapper(){
-    $("#kakao-wrapper").removelass("show-kakao-wrapper")
     // TODO :: id가 kakao-wrapper인 엘리먼트에 show-kakao-wrapper 클래스를 제거한다.
-    $("#kakao-wrapper").addclass("hide-kakao-wrapper")
+
     // TODO :: id가 kakao-wrapper인 엘리먼트에 hide-kakao-wrapper 클래스를 추가한다.
 
 }
 
 // 채팅화면이 나타나게 한다.
 function showChatWrapper(){
-    $("#kakao-chat-wrapper").addclass("show-kakao-chat-wrapper")
     // TODO :: id가 kakao-chat-wrapper인 엘리먼트에 show-kakao-chat-wrapper 클래스를 추가한다.
-    $("#kakao-chat-wrapper").removelass("hide-kakao-chat-wrapper")
+
     // TODO :: id가 kakao-chat-wrapper인 엘리먼트에 hide-kakao-chat-wrapper 클래스를 제거한다.
     
 }
 
 // 로그인 화면 입력 값을 초기화한다.
 function resetLogin(){
-    $("#kakao-email").val("");  // val은 앞에있는 이메일을 입력을 하면 그 후에 다시 빈칸으로 만든다는 의미이다.
-    $("#kakao-pw").val(""); // 패스워드도 마찬가지로 한번 입력하고 다시 빈칸으로 reset시킨다는 의미임.
+    $("#kakao-email").val("");
+    $("#kakao-pw").val("");
 }
 
 // 로딩창을 띄운다.
 function showLoading(){
-    $("#spinner-warpper").show(); //보이거나 없애는 것에는 따로 인자를 쓸 필요가 없다. 보여지거나 없애기만 하는 것이기 때문 ㅋ
+    $("#spinner-warpper").show();
 }
 
 // 로딩창을 없앤다.
@@ -214,18 +195,17 @@ function hideLoading(){
 
 // 채팅화면이 사라지게 한다.
 function hideChatWrapper(){
+    // TODO :: id가 kakao-chat-wrapper인 엘리먼트에 show-kakao-chat-wrapper 클래스를 제거한다.
 
-    $("#kakao-chat-wrapper").removeClass("show-kakao-chat-wrapper");// TODO :: id가 kakao-chat-wrapper인 엘리먼트에 show-kakao-chat-wrapper 클래스를 제거한다.
-
-    $("#kakao-chat-wrapper").addClass("show-kakao-chat-wrapper");// TODO :: id가 kakao-chat-wrapper인 엘리먼트에 hide-kakao-chat-wrapper 클래스를 추가한다.
+    // TODO :: id가 kakao-chat-wrapper인 엘리먼트에 hide-kakao-chat-wrapper 클래스를 추가한다.
     
 }
 
 // 로그인 화면이 나타나게 한다.
 function showKakaoLoginWrapper(){
-    $("#kakao-wrapper").addClass("show-kakao-wrapper");// TODO :: id가 kakao-wrapper인 엘리먼트에 show-kakao-wrapper 클래스를 추가한다.
+    // TODO :: id가 kakao-wrapper인 엘리먼트에 show-kakao-wrapper 클래스를 추가한다.
 
-    $("#kakao-wrapper").addClass("hide-kakao-wrapper");// TODO :: id가 kakao-wrapper인 엘리먼트에 hide-kakao-wrapper 클래스를 제거한다.
+    // TODO :: id가 kakao-wrapper인 엘리먼트에 hide-kakao-wrapper 클래스를 제거한다.
     
 }
 

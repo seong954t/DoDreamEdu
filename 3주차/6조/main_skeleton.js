@@ -22,42 +22,63 @@ firebase.auth().onAuthStateChanged(function (user) {
 // ----------------------------------------------------------------------
 
 // 로그인 화면에서 키보드 입력을 컨트롤 한다.
+
 $('.kakao-login').keyup(function(event){
     if(event.keyCode === 13){
         // Enter 입력 시 실행
         $('#login-btn').click();
     }else{
         // Enter 이 외 입력 시 실행
-        // 로그인 실패 문구 제거
+        function hideErrorLog(){
+            $("#login-err").hide();// 로그인 실패 문구 제거
         // TODO :: 에러문구를 제거한다.
+        hideErrorLog()
 
 
         if(getPassword().length > 5){
             // 비밀번호가 6글자 이상일 경우 색상을 로그인 가능하도록 변경
             // TODO :: 로그인 버튼 색상을 로그인 가능하도록 변경
+            enableLogin()
             
         }else{
             // 비밀번호가 6글자 미만일 경우 색상을 로그인 불가능하도록 변경
             // TODO :: 로그인 버튼 색상을 로그인 불가능하도록 변경
-            
+            disableLogin()
         }
     }
-});
+};
 
 // 회원가입을 진행한다.
 function signup(){
     // 로딩을 띄운다.
     showLoading();
     // 회원가입할 이메일과 비밀번호를 통해 회원가입을 진행한다.
-
+    
     // TODO :: createUserWithEmailAndPassword의 인자로 전달 할 Email과 Password의 값을 가져온다.
-    var email = ""
-    var pwd = ""
+    var email = getEmail()
+    var pwd = getPassword()
 
     firebase.auth().createUserWithEmailAndPassword(email, pwd)
     .then(
         function(user){
-            // 기존 회원가입이 없는 최초 회원가입일 경우 진행된다.
+            firebase.auth().createUserWithEmailAndPassword
+            // (사용자 이메일, 사용자 비밀번호)
+.then(
+    function(user){
+        // 기존 회원가입이 없는 최초 회원가입일 경우 진행된다.
+    },
+    function(error){
+        if(error.code == "auth/email-already-in-use"){
+            // 이미 해당 회원이 있는 경우 진행된다.
+        }else if(error.code == "auth/invalid-email"){
+            // 사용불가능한 이메일일 경우 진행된다.
+        }else if(error.code == "auth/weak-password"){
+            // 사용불가능한 비밀번호일 경우 진행된다.
+        }else{
+            // 이 외의 경우 추가적으로 있음
+        }
+    }
+)// 기존 회원가입이 없는 최초 회원가입일 경우 진행된다.
             // 기존 회원가입이 있는 경우 아래 error -> auth/email-already-in-use로 이동한다.
             // 회원가입이 완료 되었으면 회원 정보를 DB에 저장한다.
             upLoadNickname().then(function(success){
@@ -70,18 +91,23 @@ function signup(){
             if(error.code == "auth/email-already-in-use"){
                 // 이미 해당 회원이 있으면 로그인을 진행한다.
                 // TODO :: 로그인 함수를 실행한다(email, pwd 함께 전달).
+                signin(email, pwd)
                 
                 return;
             }else if(error.code == "auth/invalid-email"){
                 // 사용불가능한 이메일일 경우 발생한다.
                 // 에러문구 발생
-                // TODO :: 에러문구를 보이도록 한다.
-                
+                function showErrorLog(){
+                    $("#login-err").show();
+                }// TODO :: 에러문구를 보이도록 한다.
+                showErrorLog()
             }else if(error.code == "auth/weak-password"){
                 // 사용불가능한 비밀번호일 경우 발생한다.
                 // 에러문구 발생
-                // TODO :: 에러문구를 보이도록 한다.
-                
+                function showErrorLog(){
+                    $("#login-err").show();
+                }// TODO :: 에러문구를 보이도록 한다.
+                showErrorLog()
             }
             // 로딩을 제거한다.
             hideLoading();
@@ -98,8 +124,10 @@ function signin(email, pwd){
         },
         function(error){
             // 로그인에 실패할 경우 발생
-            // TODO :: 에러문구를 보이도록 한다.
-
+            function showErrorLog(){
+                $("#login-err").show();
+            }// TODO :: 에러문구를 보이도록 한다.
+            showErrorLog()
 
             // 로딩을 제거한다.
             hideLoading();
@@ -112,12 +140,31 @@ $("#login-btn").click(
     function(){
         if($("#login-btn").hasClass("enable-login")){
             // 로그인 활성화 시 실행
-
-            // TODO :: 회원가입을 실행한다.
-            
+            firebase.auth().createUserWithEmailAndPassword
+            // (사용자 이메일, 사용자 비밀번호)
+.then(
+    function(user){
+        // 기존 회원가입이 없는 최초 회원가입일 경우 진행된다.
+    },
+    function(error){
+        if(error.code == "auth/email-already-in-use"){
+            // 이미 해당 회원이 있는 경우 진행된다.
+        }else if(error.code == "auth/invalid-email"){
+            // 사용불가능한 이메일일 경우 진행된다.
+        }else if(error.code == "auth/weak-password"){
+            // 사용불가능한 비밀번호일 경우 진행된다.
+        }else{
+            // 이 외의 경우 추가적으로 있음
         }
     }
 )
+            // TODO :: 회원가입을 실행한다.
+            signup()
+        }
+    }
+)
+
+
 
 // ------------------------ 로그인 -> 채팅 전환 기능 ------------------------
 // 로그인 시 채팅화면으로 이동할 때 사용되는 기능들이 정의되어있다.
@@ -207,7 +254,10 @@ function chatDBListenner(){
             // 다른 사용자의 채팅을 감지한다.
 
             // 다란 사용자의 채팅을 WEB에 보여준다.
-            // TODO :: 다른 사용자의 채팅 내용을 말풍선으로 보이도록 한다.
+            // TODO 다른 사용자의 채팅 내용을 말풍선으로 보이도록 한다.
+
+            makeOtherChat(receiveChatData.nickName, receiveChatData.contents)
+
             // receiveChatData.nickName 에 다른 사용자의 닉네임이 담겨있음.
             // receiveChatData.contents 에 다른 사용자의 채팅 내용이 담겨있음.
 
@@ -291,7 +341,7 @@ function sendText(){
         $("#input-chat").val("");
 
         // 전송이 불가능하도록 변경
-        // TODO :: 전송이 불가능하도록 전송 버튼을 비활성화 한다.
+        // TODO 전송이 불가능하도록 전송 버튼을 비활성화 한다.
         
     }
 }

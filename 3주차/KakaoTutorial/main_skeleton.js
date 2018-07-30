@@ -37,11 +37,13 @@ $('.kakao-login').keyup(function(event){
             // 비밀번호가 6글자 이상일 경우 색상을 로그인 가능하도록 변경
             // TODO :: 로그인 버튼 색상을 로그인 가능하도록 변경
             enableLogin()
+
+            enableLogin()// TODO :: 로그인 버튼 색상을 로그인 가능하도록 변경
             
         }else{
             // 비밀번호가 6글자 미만일 경우 색상을 로그인 불가능하도록 변경
-            // TODO :: 로그인 버튼 색상을 로그인 불가능하도록 변경
-            disableLogin()
+            disableLogin()// TODO :: 로그인 버튼 색상을 로그인 불가능하도록 변경
+            
         }
     }
 });
@@ -205,7 +207,7 @@ function chatDBListenner(){
     .on('child_added', function(success){
         var receiveChatData = success.val();
         
-        if(receiveChatData.uid != getCurrentUid()){ 
+        if(receiveChatData.uid != getCurrentUid()){
             // 자신의 Uid와 다를 경우 실행된다.
             // 다른 사용자의 채팅을 감지한다.
 
@@ -295,7 +297,7 @@ function sendText(){
 
         // 전송이 불가능하도록 변경
         // TODO :: 전송이 불가능하도록 전송 버튼을 비활성화 한다.
-        disableTextSend()
+        
     }
 }
 
@@ -305,13 +307,13 @@ $("#input-chat").keyup(function(event){
         // Backspace 입력 시 글자수가 없으면 전송이 불가능하도록 변경
         if(getInputChat().length <= 1){
             // TODO :: 전송이 불가능하도록 전송 버튼을 비활성화 한다.
-            disableTextSend()
+            
         }
     }else{
         // Backspace 입력 시 글자수가 있으면 전송이 가능하도록 변경
         if(getInputChat().length > 0){
             // TODO :: 전송이 가능하도록 전송 버튼을 활성화 한다.
-            enableTextSend()
+            
         }
     }
 })
@@ -326,19 +328,17 @@ $("#input-chat").keypress(function(event){
         if(!event.shiftKey){
             // shift가 함께 입력되지 않았으면 채팅 전송이 이루어진다.
             event.preventDefault();
-            getInputChat()
+
             // TODO :: 채팅 내용을 전송한다.
             
         }
     }else{
         if(getInputChat().length > 0){
             // 채팅 입력 시 글자수가 있으면 전송이 가능하도록 변경
-            enableTextSend()
             // TODO :: 전송이 가능하도록 전송 버튼을 활성화 한다.
             
         }else{
             // 채팅 입력 시 글자수가 없으면 전송이 불가능하도록 변경
-            disableTextSend()
             // TODO :: 전송이 불가능하도록 전송 버튼을 비활성화 한다.
             
         }
@@ -349,7 +349,6 @@ $("#input-chat").keypress(function(event){
 $("#text-send").click(
     function(){
         // 채팅 데이터 전송
-        getInputChat()
         // TODO :: 채팅 내용을 전송한다.
 
     }
@@ -374,7 +373,6 @@ function upLoadChat(contents){
     // 채팅 내용을 WEB에 보여준다.
     // TODO :: 자신의 채팅 내용을 말풍선으로 보이도록 한다.
     // contents 에 자신의 채팅 내용이 담겨있음.
-    makeMyChat(contents)
     
 }
 
