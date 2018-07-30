@@ -44,6 +44,7 @@ $('.kakao-login').keyup(function(event){
     }
 });
 
+// jjuya
 // 회원가입을 진행한다.
 function signup(){
     // 로딩을 띄운다.
@@ -51,8 +52,8 @@ function signup(){
     // 회원가입할 이메일과 비밀번호를 통해 회원가입을 진행한다.
 
     // TODO :: createUserWithEmailAndPassword의 인자로 전달 할 Email과 Password의 값을 가져온다.
-    var email = ""
-    var pwd = ""
+    var email = getEmail();
+    var pwd = getPassword();
 
     firebase.auth().createUserWithEmailAndPassword(email, pwd)
     .then(
@@ -71,16 +72,22 @@ function signup(){
                 // 이미 해당 회원이 있으면 로그인을 진행한다.
                 // TODO :: 로그인 함수를 실행한다(email, pwd 함께 전달).
                 
+                signin(email, pwd);
+
                 return;
             }else if(error.code == "auth/invalid-email"){
                 // 사용불가능한 이메일일 경우 발생한다.
                 // 에러문구 발생
                 // TODO :: 에러문구를 보이도록 한다.
+
+                alert("잘못된 이메일 입니다.");
                 
             }else if(error.code == "auth/weak-password"){
                 // 사용불가능한 비밀번호일 경우 발생한다.
                 // 에러문구 발생
                 // TODO :: 에러문구를 보이도록 한다.
+
+                alert("잘못된 비밀번호 입니다.");
                 
             }
             // 로딩을 제거한다.

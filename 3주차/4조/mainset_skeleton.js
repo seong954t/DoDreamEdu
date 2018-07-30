@@ -5,16 +5,18 @@
 // 3. 로그인 실패 시 출력되는 에러 문구 활성화 및 비활성화 기능.
 // ----------------------------------------------------------------------
 
+//jjuya
 // 로그인 시 입력한 이메일을 가져온다.
 function getEmail(){
     // TODO :: id가 kakao-email인 엘리먼트의 값을 가져와 반환한다.
-    return ''
+    return $("#kakao-email").val();
 }
 
+//jjuya
 // 로그인 시 입력한 비밀번호를 가져온다.
 function getPassword(){
     // TODO :: id가 kakao-pw인 엘리먼트의 값을 가져와 반환한다.
-    return ''
+    return $("#kakao-pw").val();
 }
 
 // 로그인이 가능하도록 변경한다.
