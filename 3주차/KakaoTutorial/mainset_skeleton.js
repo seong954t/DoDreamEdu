@@ -14,7 +14,7 @@ function getEmail(){
 // 로그인 시 입력한 비밀번호를 가져온다.
 function getPassword(){
     // TODO :: id가 kakao-pw인 엘리먼트의 값을 가져와 반환한다.
-    return $("kakao-pw").val();
+    return $("#kakao-pw").val();
 }
 
 // 로그인이 가능하도록 변경한다.
@@ -90,7 +90,7 @@ function makeMyChat(contents){
         "</div>"
     )
     // TODO :: 채팅 스크롤을 하단으로 내리도록 한다.
-    
+    scrollBottom();
 }
 
 // 상대의 채팅 내용을 브라우저에 보이도록 한다.
@@ -104,7 +104,7 @@ function makeOtherChat(nickName, contents){
         "</div>"
     )
     // TODO :: 채팅 스크롤을 하단으로 내리도록 한다.
-    
+    scrollBottom();
 }
 
 // 채팅 스크롤을 가장 아래로 가게 한다.
