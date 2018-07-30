@@ -1,63 +1,19 @@
-<<<<<<< HEAD
-
 .frame{
-    width:350px;
-    height:350px;
-    position:fixed;
-    top: 50%;
-    right:0;
-    left:0;
-    transform: translate(0,-50%);
-    margin :auto;
-    border-radius:10px;
-    box-shadow : 3px 3px 7px 7px rgba(0,0,0,0.1);
-}
-.title{
-    color: rgb(3,198,53);
-    text-align:center;
-    font-size : 36px;
-    font-weight : bold;
-    margin: auto;
-}
-
-.inputs{
-    background-color: rgb(239,239,239);
-    width:220px;
-    padding: 0 15px;
-    height:40px;
-    border:none;
-    margin:5px 0px;
-    font-size:14px;
-}
-
-.buttons{
-    width:250px;
-    height:40px;
-    margin:5px 0px;
-    background-color:rgb(3,198,53);
-    border-radius: 100px;
-    border:none;
-    color:rgb(255,255,255);
-    font-size:16px;
-    font-weight:bold;
-}
-
-=======
-.frame{
-    width: 350px;
-    height: 350px;
-    /* background-color: red; */
+    width: 250px;
+    height: 250px;
+    padding: 50px;
     position: fixed;
     top: 50%;
-    right:0;
+    right: 0;
     left: 0;
     transform: translate(0, -50%);
-    margin:auto;
+    margin: auto;
     border-radius: 10px;
-    box-shadow: 3px 3px 7px 7px rgba(0, 0, 0, 1);
+    box-shadow: 3px 3px 7px 7px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.title {
+.title{
     color: rgb(3, 198, 53);
     text-align: center;
     font-size: 36px;
@@ -65,7 +21,7 @@
     margin: auto;
 }
 
-.inputs {
+.inputs{
     background-color: rgb(239, 239, 239);
     width: 220px;
     padding: 0 15px;
@@ -75,7 +31,7 @@
     font-size: 14px;
 }
 
-.buttons {
+.buttons{
     width: 250px;
     height: 40px;
     margin: 5px 0px;
@@ -87,7 +43,16 @@
     font-weight: bold;
 }
 
-#login-frame {
+#db-upload-frame{
     display: none;
 }
->>>>>>> 2406bdf2f6a9ea0c13353aa4298b7905e0b045c9
+
+#real-time-val{
+    display: block;
+    width: 250px;
+    height: 70px;
+    word-break: break-all;
+    white-space: pre-wrap;
+    overflow-y: scroll;
+    text-align: left;
+}
