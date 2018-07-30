@@ -80,7 +80,7 @@ function enableTextSend(){
 // 채팅 내용을 가져온다.
 function getInputChat(){
     // TODO :: id가 input-chat인 엘리먼트의 값을 가져와 반환한다.
-    return ''
+    return $("#input-chat")
 }
 
 // 나의 채팅 내용을 브라우저에 보이도록 한다.
