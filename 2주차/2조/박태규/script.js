@@ -37,6 +37,7 @@ function login(){
             console.log(success);
             $("#login-frame").hide();
             $("#chat-frame").show();
+            uploadDBListenner();
             alert("로그인 성공");
         }, function(error){
             console.log(error);
@@ -53,15 +54,19 @@ $("#login-btn").click(function(){
 
 
 /* 로그아웃 function */
-function logout(){
-    console.log("로그아웃");
-    $("#login-frame").show();
-    $("#chat-frame").hide();
+function signOut(){
+    firebase.auth().signOut()
+        .then(
+            function(){
+                $("#login-frame").show();
+                $("#chat-frame").hide();
+            }
+        )
 }
 
 $("#logout-btn").click(function(){
     console.log("로그아웃 버튼클릭");
-    logout();
+    signOut();
 })
 
 
