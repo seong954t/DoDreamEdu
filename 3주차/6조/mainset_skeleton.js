@@ -8,46 +8,28 @@
 // 로그인 시 입력한 이메일을 가져온다.
 function getEmail(){
     // TODO :: id가 kakao-email인 엘리먼트의 값을 가져와 반환한다.
-<<<<<<< HEAD
 
     return $("#kakao-email").val()
-=======
-    return $("#kakao-email").val()
-}
->>>>>>> 8334317aa676a9ce2e0bb41eee509c8f53b9e041
-
 }
 // 로그인 시 입력한 비밀번호를 가져온다.
 function getPassword(){
     // TODO :: id가 kakao-pw인 엘리먼트의 값을 가져와 반환한다.
     return $("#kakao-pw").val()
-<<<<<<< HEAD
 
-=======
 }
->>>>>>> 8334317aa676a9ce2e0bb41eee509c8f53b9e041
+
 
 // 로그인이 가능하도록 변경한다.
 function enableLogin(){
     $("#login-btn").addClass("enable-login") // TODO :: id가 login-btn인 엘리먼트에 enable-login 클래스를 추가한다.
-<<<<<<< HEAD
-    $("#login-btn").removeClass("disable-login")    // TODO :: id가 login-btn인 엘리먼트에 disable-login 클래스를 제거한다.
-    
-=======
     $("#login-btn").removeClass("disable-login")    // TODO :: id가 login-btn인 엘리먼트에 disable-login 클래스를 제거한다.    
->>>>>>> 8334317aa676a9ce2e0bb41eee509c8f53b9e041
 }
 
 // 로그인이 불가능하도록 변경한다.
 function disableLogin(){
     $("#login-btn").addClass("enable-login")// TODO :: id가 login-btn인 엘리먼트에 enable-login 클래스를 제거한다.
     $("#login-btn").removeClass("disable-login") // TODO :: id가 login-btn인 엘리먼트에 disable-login 클래스를 추가한다.
-<<<<<<< HEAD
-    
-=======
->>>>>>> 8334317aa676a9ce2e0bb41eee509c8f53b9e041
 }
-
 // 로그인 에러 문구를 띄운다.
 function showErrorLog(){
     $("#login-err").show();
@@ -91,16 +73,8 @@ function enableTextSend(){
 // 채팅 내용을 가져온다.
 function getInputChat(){
     // TODO :: id가 input-chat인 엘리먼트의 값을 가져와 반환한다.
-<<<<<<< HEAD
-
-    $("#input-chat").val()
-    return $("#input-chat").val()
-
-=======
-    $("#input-chat").val()
     return $("#input-chat").val()
 }
->>>>>>> 8334317aa676a9ce2e0bb41eee509c8f53b9e041
 
 // 나의 채팅 내용을 브라우저에 보이도록 한다.
 function makeMyChat(contents){
@@ -111,21 +85,11 @@ function makeMyChat(contents){
             "</div>"+
         "</div>"
     )
-<<<<<<< HEAD
     // TODO :: 채팅 스크롤을 하단으로 내리도록 한다.
-
-    function scrollBottom(){
-        $("#chat-contents-wrapper").stop().animate({ scrollTop: $("#chat-contents-wrapper")[0].scrollHeight }, "slow");
-    }
-=======
-
-    // 채팅 스크롤을 하단으로 내리도록 한다.
 
     scrollBottom()
 }
->>>>>>> 8334317aa676a9ce2e0bb41eee509c8f53b9e041
-
-
+       
 // 상대의 채팅 내용을 브라우저에 보이도록 한다.
 function makeOtherChat(nickName, contents){
     $("#chat-contents-wrapper").append(
@@ -136,19 +100,10 @@ function makeOtherChat(nickName, contents){
             "</div>"+
         "</div>"
     )
-<<<<<<< HEAD
+
     // TODO :: 채팅 스크롤을 하단으로 내리도록 한다.
-
-    function scrollBottom(){
-        $("#chat-contents-wrapper").stop().animate({ scrollTop: $("#chat-contents-wrapper")[0].scrollHeight }, "slow");
-    }
-
-=======
-
-    //채팅 스크롤을 하단으로 내리도록 한다.
-    scrollBottom() 
+    scrollBottom()
 }
->>>>>>> 8334317aa676a9ce2e0bb41eee509c8f53b9e041
 
 // 채팅 스크롤을 가장 아래로 가게 한다.
 function scrollBottom(){
