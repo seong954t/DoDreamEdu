@@ -23,6 +23,7 @@
     최장훈 - https://github.com/cellenar/cellenar.github.io
     김윤지 - https://github.com/cocogoodjob/cocogoodjob.github.io
     조영관 - https://github.com/jo0411/jo0411.github.io
+    이은진 - https://github.com/eunziny/eunziny.github.io
 
     4조
     박주연 - https://github.com/jjuya/jjuya.github.io
@@ -31,11 +32,12 @@
     
     5조
     장우종 - https://github.com/wj923/wj923.github.io.git
-    국재건
+    국재건 - https://github.com/Jgunguk/jgunguk.github.io.git
     송민정 - https://github.com/minjeongsong/minjeongsong.github.io.git
     이혜련 - https://github.com/rowanlee92/rowanlee92.github.io
 
     6조
     김양훈 - https://github.com/kimyanghun/kimyanghun.github.io.git
     이하림 - https://github.com/tangram69/tangram69.github.io
-    조서형 - https://github.com/jjoeey/jjoeey.github.io
+    조서형 - https://github.com/jjoeey/jjoeey.github.io.git
+    문예성 - https://github.com/callyestr/callyestr.github.io
