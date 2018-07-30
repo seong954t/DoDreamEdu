@@ -90,7 +90,7 @@ function makeMyChat(contents){
         "</div>"
     )
     // TODO :: 채팅 스크롤을 하단으로 내리도록 한다.
-    $("#chat-contents-wrapper").scrollBottom();
+    scrollBottom();
 }
 
 // 상대의 채팅 내용을 브라우저에 보이도록 한다.
@@ -104,7 +104,7 @@ function makeOtherChat(nickName, contents){
         "</div>"
     )
     // TODO :: 채팅 스크롤을 하단으로 내리도록 한다.
-    $("#chat-contents-wrapper").scrollBottom();
+    scrollBottom();
 }
 
 // 채팅 스크롤을 가장 아래로 가게 한다.

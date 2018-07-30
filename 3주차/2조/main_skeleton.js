@@ -210,7 +210,7 @@ function chatDBListenner(){
             // TODO :: 다른 사용자의 채팅 내용을 말풍선으로 보이도록 한다.
             // receiveChatData.nickName 에 다른 사용자의 닉네임이 담겨있음.
             // receiveChatData.contents 에 다른 사용자의 채팅 내용이 담겨있음.
-            makeOtherChat(receiveChatData.nickName , receiveChatData.contents);
+            makeOtherChat(receiveChatData.nickName, receiveChatData.contents);
         }
     });
 }
