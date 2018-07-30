@@ -8,13 +8,13 @@
 // 로그인 시 입력한 이메일을 가져온다.
 function getEmail(){
     // TODO :: id가 kakao-email인 엘리먼트의 값을 가져와 반환한다.
-    return $("#kakao-email").show();
+    return $("#kakao-email").val();
 }
 
 // 로그인 시 입력한 비밀번호를 가져온다.
 function getPassword(){
     // TODO :: id가 kakao-pw인 엘리먼트의 값을 가져와 반환한다.
-    return $("kakao-pw").show();
+    return $("#kakao-pw").val();
 }
 
 // 로그인이 가능하도록 변경한다.
@@ -28,7 +28,7 @@ function enableLogin(){
 // 로그인이 불가능하도록 변경한다.
 function disableLogin(){
     // TODO :: id가 login-btn인 엘리먼트에 enable-login 클래스를 제거한다.
-    $("#login-btn").addClass("enable-login")
+    $("#login-btn").removeClass("enable-login")
     // TODO :: id가 login-btn인 엘리먼트에 disable-login 클래스를 추가한다.
     $("#login-btn").addClass("disable-login")
 }
@@ -89,7 +89,7 @@ function makeMyChat(contents){
         "</div>"
     )
     // TODO :: 채팅 스크롤을 하단으로 내리도록 한다.
-    
+    scrollBottom();
 }
 
 // 상대의 채팅 내용을 브라우저에 보이도록 한다.
@@ -103,7 +103,7 @@ function makeOtherChat(nickName, contents){
         "</div>"
     )
     // TODO :: 채팅 스크롤을 하단으로 내리도록 한다.
-    
+    scrollBottom();
 }
 
 // 채팅 스크롤을 가장 아래로 가게 한다.
