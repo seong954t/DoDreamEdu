@@ -211,7 +211,7 @@ function chatDBListenner(){
             // TODO :: 다른 사용자의 채팅 내용을 말풍선으로 보이도록 한다.
             // receiveChatData.nickName 에 다른 사용자의 닉네임이 담겨있음.
             // receiveChatData.contents 에 다른 사용자의 채팅 내용이 담겨있음.
-            makeOtherChat();
+            makeOtherChat(nickName,contents);
         }
     });
 }
@@ -369,7 +369,7 @@ function upLoadChat(contents){
     // 채팅 내용을 WEB에 보여준다.
     // TODO :: 자신의 채팅 내용을 말풍선으로 보이도록 한다.
     // contents 에 자신의 채팅 내용이 담겨있음.
-    makeMyChat();
+    makeMyChat(contents);
 }
 
 // 수정 버튼 클릭시 실행
