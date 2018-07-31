@@ -32,7 +32,7 @@ $('.kakao-login').keyup(function(event){
         
             // $("#login-err").hide();// 로그인 실패 문구 제거
             // TODO :: 에러문구를 제거한다.
-            hideErrorLog()
+            // hideErrorLog()
 
 
             if(getPassword().length > 5){
@@ -299,7 +299,7 @@ function sendText(){
 
         // 채팅 내용을 공백으로 변경 초기화
         $("#input-chat").val("");
-
+        disableTextSend();
         // 전송이 불가능하도록 변경
         // TODO 전송이 불가능하도록 전송 버튼을 비활성화 한다.
         
@@ -312,11 +312,12 @@ $("#input-chat").keyup(function(event){
         // Backspace 입력 시 글자수가 없으면 전송이 불가능하도록 변경
         if(getInputChat().length <= 1){
             // TODO :: 전송이 불가능하도록 전송 버튼을 비활성화 한다.
-            
+           disableTextSend(); 
         }
     }else{
         // Backspace 입력 시 글자수가 있으면 전송이 가능하도록 변경
         if(getInputChat().length > 0){
+            enableTextSend();
             // TODO :: 전송이 가능하도록 전송 버튼을 활성화 한다.
             
         }
@@ -333,7 +334,7 @@ $("#input-chat").keypress(function(event){
         if(!event.shiftKey){
             // shift가 함께 입력되지 않았으면 채팅 전송이 이루어진다.
             event.preventDefault();
-
+            sendText();
             // TODO :: 채팅 내용을 전송한다.
             
         }
@@ -341,11 +342,11 @@ $("#input-chat").keypress(function(event){
         if(getInputChat().length > 0){
             // 채팅 입력 시 글자수가 있으면 전송이 가능하도록 변경
             // TODO :: 전송이 가능하도록 전송 버튼을 활성화 한다.
-            
+            enableTextSend();
         }else{
             // 채팅 입력 시 글자수가 없으면 전송이 불가능하도록 변경
             // TODO :: 전송이 불가능하도록 전송 버튼을 비활성화 한다.
-            
+            disableTextSend();
         }
     }
 })
@@ -355,7 +356,7 @@ $("#text-send").click(
     function(){
         // 채팅 데이터 전송
         // TODO :: 채팅 내용을 전송한다.
-
+        sendText();
     }
 )
 
