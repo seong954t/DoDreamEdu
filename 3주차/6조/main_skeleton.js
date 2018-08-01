@@ -377,7 +377,7 @@ function upLoadChat(contents){
     });
 
     // 채팅 내용을 WEB에 보여준다.
-    // TODO :: 자신의 채팅 내용을 말풍선으로 보이도록 한다.
+    makeMyChat(contents);// TODO :: 자신의 채팅 내용을 말풍선으로 보이도록 한다.
     // contents 에 자신의 채팅 내용이 담겨있음.
     
 }
