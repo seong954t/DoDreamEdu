@@ -84,10 +84,4 @@ function getPassword(){
 
 function setDBdata(data){
     $("#real-time-val").text(data)
-<<<<<<< HEAD
 }
-
-
-=======
-}
->>>>>>> 0aca7b2eb8a5fe7ea62a1481940b37fb4c05eb12
