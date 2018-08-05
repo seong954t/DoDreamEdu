@@ -47,7 +47,6 @@ $('.kakao-login').keyup(function(event){
 
 // 회원가입을 진행한다.
 function signup(){
-    alert("회원가입진행");
     // 로딩을 띄운다.
     showLoading();
     // 회원가입할 이메일과 비밀번호를 통해 회원가입을 진행한다.
@@ -206,15 +205,19 @@ function chatDBListenner(){
         var receiveChatData = success.val();
         
         if(receiveChatData.uid != getCurrentUid()){
+   
             // 자신의 Uid와 다를 경우 실행된다.
             // 다른 사용자의 채팅을 감지한다.
 
             // 다란 사용자의 채팅을 WEB에 보여준다.
             // TODO :: 다른 사용자의 채팅 내용을 말풍선으로 보이도록 한다.
+            
+
             makeOtherChat(receiveChatData.nickName, receiveChatData.contents);
+            
             // receiveChatData.nickName 에 다른 사용자의 닉네임이 담겨있음.
             // receiveChatData.contents 에 다른 사용자의 채팅 내용이 담겨있음.
-            makeOtherChat(nickName,contents);
+           // makeOtherChat(nickName,contents);
         }
     });
 }
@@ -356,7 +359,6 @@ $("#text-send").click(
 // 채팅 내용을 DB에 업로드 한다.
 function upLoadChat(contents){
     // 닉네임과 함께 데이터를 저장하기 위해 닉네임을 얻은 후 실행한다.
-    alert("upLoadChat");
     getNickname().once('value').then(function(success){
 
         // 채팅 데이터를 입력 시간을 통해 DB에 저장한다.
@@ -373,8 +375,7 @@ function upLoadChat(contents){
     // 채팅 내용을 WEB에 보여준다.
     // TODO :: 자신의 채팅 내용을 말풍선으로 보이도록 한다.
     makeMyChat(contents);
-    // contents 에 자신의 채팅 내용이 담겨있음.
-    makeMyChat(contents);
+    // contents 에 자신의 채팅 내용이 담겨있음
 }
 
 // 수정 버튼 클릭시 실행
