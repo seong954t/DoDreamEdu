@@ -30,6 +30,7 @@ function getWinningNumbersAndBonusNumber(){
  
 }
 
+// 파라미터 a와 b를 더한 값을 리턴한다.
 function add(a, b){
 
 }
@@ -51,14 +52,14 @@ function getWinningResult(lotto_nums){
 }
 
 function addLottoNum(){
+    // 이 부분은 수정하지 마세요.
     let lotto_nums = getLottoNums();
     user_lotto_numbers_list.push(lotto_nums);
-
-    // 이 부분은 수정하지 마세요.
     drawCircle(lotto_nums);
 }
 
 function checkWinLotto(){
+    // 이 부분은 수정하지 마세요.
   getWinningNumbersAndBonusNumber();
 
   let result = $(".result")
