@@ -14,7 +14,7 @@
     정재균 - https://github.com/thisisnotahumanbeing/thisisnotahumanbeing.github.io
 
     2조
-    노현성 - https://github.com/nobj-hongik/nobj-hongik.github.io/
+    노현성 - https://github.com/nobj-hongik/nobj-hongik.github.io
     박슬난
     구자룡 - https://github.com/kujarung/kujarung.github.io
     박태규 - https://github.com/esongi/esongi.github.io
@@ -31,13 +31,13 @@
     황준혁 - https://github.com/wnsgur556/wnsgur556.github.io
     
     5조
-    장우종 - https://github.com/wj923/wj923.github.io.git
-    국재건 - https://github.com/Jgunguk/jgunguk.github.io.git
-    송민정 - https://github.com/minjeongsong/minjeongsong.github.io.git
+    장우종 - https://github.com/wj923/wj923.github.io
+    국재건 - https://github.com/Jgunguk/jgunguk.github.io
+    송민정 - https://github.com/minjeongsong/minjeongsong.github.io
     이혜련 - https://github.com/rowanlee92/rowanlee92.github.io
 
     6조
-    김양훈 - https://github.com/kimyanghun/kimyanghun.github.io.git
+    김양훈 - https://github.com/kimyanghun/kimyanghun.github.io
     이하림 - https://github.com/tangram69/tangram69.github.io
-    조서형 - https://github.com/jjoeey/jjoeey.github.io.git
+    조서형 - https://github.com/jjoeey/jjoeey.github.io
     문예성 - https://github.com/callyestr/callyestr.github.io
