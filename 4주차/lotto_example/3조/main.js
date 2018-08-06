@@ -21,18 +21,31 @@ function getLottoNums(){
 
 // lotto_nums(list)에서 중복된 값이 있으면 true 그렇지 않으면 false 반환
 function checkDuplicatedNumInList(lotto_nums){
-   
+    for(let i=0; i<lotto_nums.length; i++) {
+        for(let j=i+1; j<lotto_nums.length; j++) {
+            if(lotto_nums[i]==lotto_nums[j]) {
+                return true
+            }
+        }
+    }
+    return false
 }
 
 // getLottoNums 함수를 통해 winning_numbers에 당첨번호를 위한 숫자 6개를 얻는다.
 // checkDuplicatedNum 함수를 통해 winning_numbers와 중복되지 않는 bonus_number를 얻는다.
 function getWinningNumbersAndBonusNumber(){
- 
+    winning_numbers = getLottoNums();
+    let bonus = getRandomNum();
+    while(checkDuplicatedNum(winning_numbers, bonus)){
+        bonus = getRandomNum();
+    }
+    bonus_number = bonus;
 }
 
 // 파라미터 a와 b를 더한 값을 리턴한다.
 function add(a, b){
-
+    let hap = a+b
+    return hap
 }
 
 // 당첨번호 winning_number와 자신의 lotto_nums 중 일치하는 번호의 개수를 반환한다.
