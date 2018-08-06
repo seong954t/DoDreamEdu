@@ -117,6 +117,16 @@ function signin(email, pwd){
     );
 }
 
+function login() {
+    showLoading();
+    var email = getEmail();
+    var password = getPassword();
+    var rootRef = firebase.database().ref("users/");
+    rootRef.orderByChild('name').equalTo(email).once('value', function(data){
+        console.log(data.val());
+    });
+}
+
 // 로그인 버튼 클릭시 실행
 $("#login-btn").click(
     function(){
@@ -124,7 +134,7 @@ $("#login-btn").click(
             // 로그인 활성화 시 실행
 
             // TODO :: 회원가입을 실행한다.
-            signup();
+            login();
         }
     }
 )
