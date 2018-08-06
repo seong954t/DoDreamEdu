@@ -2,52 +2,22 @@ winning_numbers = []
 bonus_number = 0
 user_lotto_numbers_list = []
 
-lotto_nums =[]
-var ball_num
-
 // 1 ~ 45 사이의 랜덤한 숫자 반환
-// function getRandomNum()
 function getRandomNum(){
-    var RandVal = Math.random() * (45 - 1) + 1;
-    return Math.floor(RandVal)
+  return 5
 }
 
 // lotto_nums(list) 값들 중 ball_num(number)값과 중복되는 값이 있는지 확인한다.
 // 중복되는 값이 있으면 true 그렇지 않으면 false 반환
 function checkDuplicatedNum(lotto_nums, ball_num){
-    var a = 0
-    for (a ; a< lotto_nums.length; a++) {
-        if (lotto_nums[a] == ball_num) {
-            return true
-        }
-        else {
-            return false
-        }
-    }
+    return true
+
 }
 
 // getRandomNum 함수를 통해 lotto_nums(list)에 숫자 6개를 넣어 반환한다.
 // checkDuplicatedNum 함수를 통해 lotto 숫자에 중복된 숫자가 들어가지 않도록 한다.
 function getLottoNums(){
-    var Random = getRandomNum()
-    var a = 0
-    second_lotto_num = []
-
-    while(lotto_nums.length != 6) {
-        
-        second_lotto_num.push(Random)
-        var b = checkDuplicatedNum(second_lotto_num, ball_num)
-        if (b == false) {
-            lotto_nums.push(second_lotto_num)
-        }
-        
-        if (lotto_nums.length ==6) {
-            return lotto_nums
-            break
-        }
-
-    }
-    
+  
 }
 
 // lotto_nums(list)에서 중복된 값이 있으면 true 그렇지 않으면 false 반환
@@ -68,7 +38,15 @@ function add(a, b){
 
 // 당첨번호 winning_number와 자신의 lotto_nums 중 일치하는 번호의 개수를 반환한다.
 function getMachedNum(lotto_nums){
-    
+    count_num = 0
+    for(let i=0;i<6;i++){
+        for(let j=0;j<6;j++){
+            if(winning_numbers[i]==lotto_nums[j]){
+                count_num = count_num + 1
+            }
+        }
+    }
+    return count_num
 }
 
 // getMachedNum 함수를 통해 얻은 값을 통해 '꽝', '5등', '4등', '3등', '2등', '1등'을 반환한다.
@@ -79,7 +57,28 @@ function getMachedNum(lotto_nums){
 // 2등 -> 5개 동일, 보너스 동일
 // 1등 -> 6개 동일
 function getWinningResult(lotto_nums){
-   
+    let count_Num = getMachedNum(lotto_nums)
+    console.log(count_Num)
+    ans = ""
+    if(count_Num<=2){
+        ans = "꽝"
+    }
+    else if(count_Num==3){
+        ans = "5등"
+    }
+    else if(count_Num==4){
+        ans = "4등"
+    }
+    else if(count_Num==5 && lotto_nums.includes(bonus_number)){
+        ans = "2등"
+    }
+    else if(count_Num==5){
+        ans = "3등"
+    }
+    else{
+        ans = "1등"
+    }
+    return ans
 }
 
 function addLottoNum(){
