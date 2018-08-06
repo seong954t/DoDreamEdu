@@ -2,50 +2,68 @@ winning_numbers = []
 bonus_number = 0
 user_lotto_numbers_list = []
 
+lotto_nums =[]
+var ball_num
+
 // 1 ~ 45 사이의 랜덤한 숫자 반환
+// function getRandomNum()
 function getRandomNum(){
-    
+    var RandVal = Math.random() * (45 - 1) + 1;
+    return Math.floor(RandVal)
 }
 
 // lotto_nums(list) 값들 중 ball_num(number)값과 중복되는 값이 있는지 확인한다.
 // 중복되는 값이 있으면 true 그렇지 않으면 false 반환
 function checkDuplicatedNum(lotto_nums, ball_num){
-
+    var a = 0
+    for (a ; a< lotto_nums.length; a++) {
+        if (lotto_nums[a] == ball_num) {
+            return true
+        }
+        else {
+            return false
+        }
+    }
 }
 
 // getRandomNum 함수를 통해 lotto_nums(list)에 숫자 6개를 넣어 반환한다.
 // checkDuplicatedNum 함수를 통해 lotto 숫자에 중복된 숫자가 들어가지 않도록 한다.
 function getLottoNums(){
-  
+    var Random = getRandomNum()
+    var a = 0
+    second_lotto_num = []
+
+    while(lotto_nums.length != 6) {
+        
+        second_lotto_num.push(Random)
+        var b = checkDuplicatedNum(second_lotto_num, ball_num)
+        if (b == false) {
+            lotto_nums.push(second_lotto_num)
+        }
+        
+        if (lotto_nums.length ==6) {
+            return lotto_nums
+            break
+        }
+
+    }
+    
 }
 
 // lotto_nums(list)에서 중복된 값이 있으면 true 그렇지 않으면 false 반환
 function checkDuplicatedNumInList(lotto_nums){
-    for(let i=0; i<lotto_nums.length; i++) {
-        for(let j=i+1; j<lotto_nums.length; j++) {
-            if(lotto_nums[i]==lotto_nums[j]) {
-                return true
-            }
-        }
-    }
-    return false
+   
 }
 
 // getLottoNums 함수를 통해 winning_numbers에 당첨번호를 위한 숫자 6개를 얻는다.
 // checkDuplicatedNum 함수를 통해 winning_numbers와 중복되지 않는 bonus_number를 얻는다.
 function getWinningNumbersAndBonusNumber(){
-    winning_numbers = getLottoNums();
-    let bonus = getRandomNum();
-    while(checkDuplicatedNum(winning_numbers, bonus)){
-        bonus = getRandomNum();
-    }
-    bonus_number = bonus;
+ 
 }
 
 // 파라미터 a와 b를 더한 값을 리턴한다.
 function add(a, b){
-    let hap = a+b
-    return hap
+
 }
 
 // 당첨번호 winning_number와 자신의 lotto_nums 중 일치하는 번호의 개수를 반환한다.
