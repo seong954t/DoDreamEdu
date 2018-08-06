@@ -4,17 +4,25 @@ user_lotto_numbers_list = []
 
 // 1 ~ 45 사이의 랜덤한 숫자 반환
 function getRandomNum(){
+<<<<<<< HEAD:4주차/main.js
   return Math.floor(Math.random() * 46) + 1;
+=======
+    
+>>>>>>> d328b6ba21b7910dccdb49e4f66ff8e72ccb2688:4주차/lotto_example/main.js
 }
 
 // lotto_nums(list) 값들 중 ball_num(number)값과 중복되는 값이 있는지 확인한다.
 // 중복되는 값이 있으면 true 그렇지 않으면 false 반환
 function checkDuplicatedNum(lotto_nums, ball_num){
+<<<<<<< HEAD:4주차/main.js
     for(var i in lotto_nums){
         if(lotto_nums[i] == ball_num)
             return true;
     }
     return false;
+=======
+
+>>>>>>> d328b6ba21b7910dccdb49e4f66ff8e72ccb2688:4주차/lotto_example/main.js
 }
 
 // getRandomNum 함수를 통해 lotto_nums(list)에 숫자 6개를 넣어 반환한다.
