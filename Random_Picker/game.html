@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>누가발표할까요?</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        h1{
+            position: relative;
+            text-align: center;
+            font-size: 150px;
+            top: 50%;
+            transform: translate(0,50%);
+        }
+        button {
+            width: 100px;
+            height: 40px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="select()">발표자 선택</button>
+    <h1 id="name"></h1>
+</body>
+<script src="./radom.js"></script>
+</html>
