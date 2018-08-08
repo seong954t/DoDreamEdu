@@ -1,4 +1,3 @@
-// TODO :: Write the testing code
 describe("로또 함수의", function(){
     describe("getRandomNum 함수는", function(){
         it("1~45 사이의 수 반환한다.", function(){
